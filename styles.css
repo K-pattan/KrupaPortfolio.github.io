@@ -6,6 +6,7 @@
 }
 
 body {
+   
     background: linear-gradient(135deg, #141e30, #243b55);
     display: flex;
     justify-content: center;
@@ -193,4 +194,135 @@ body.light .foundation {
 body.light .foundation h3 {
     color: #00796b;
 }
+
+.overview {
+    max-width: 850px;
+    margin: 25px auto 50px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.35);
+    animation: slideUp 2.8s ease;
+}
+
+.overview h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ffd54f;
+    text-align: center;
+}
+
+.overview p {
+    font-size: 17px;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 18px;
+}
+
+.overview ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.overview ul li {
+    font-size: 18px;
+    padding: 8px 0;
+    border-left: 4px solid #ffd54f;
+    padding-left: 15px;
+    margin-bottom: 8px;
+}
+
+/* Light mode support */
+body.light .overview {
+    background: rgba(255, 255, 255, 0.9);
+    color: #0d47a1;
+}
+
+body.light .overview h3 {
+    color: #ff9800;
+}
+
+body.light .overview ul li {
+    border-left-color: #ff9800;
+}
+
+/* Interactive Chapters */
+.chapters {
+    list-style: none;
+    padding: 0;
+}
+
+.chapters li {
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    border-left: 4px solid #ffd54f;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.chapter-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.chapters li:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(5px);
+}
+
+/* Hidden content */
+.chapter-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.chapters li:hover .chapter-content {
+    max-height: 600px;
+}
+
+.chapter-content ul {
+    margin-top: 8px;
+    padding-left: 20px;
+}
+
+.chapter-content li {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+/* Laboratory section */
+.lab {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.lab h4 {
+    text-align: center;
+    font-size: 22px;
+    color: #4dd0e1;
+    margin-bottom: 15px;
+}
+
+.lab ul li {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+/* Light mode support */
+body.light .chapters li {
+    border-left-color: #ff9800;
+}
+
+body.light .chapters li:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+body.light .lab h4 {
+    color: #00796b;
+}
+
 
