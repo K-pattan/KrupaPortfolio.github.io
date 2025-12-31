@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -208,7 +209,7 @@ body.light .foundation h3 {
 .overview h3 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #ffd54f;
+    color: white;
     text-align: center;
 }
 
@@ -322,6 +323,59 @@ body.light .chapters li:hover {
 }
 
 body.light .lab h4 {
+    color: #00796b;
+}
+
+/* Force white links for chapter subtopics */
+.chapter-content a,
+.chapter-content a:visited {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.chapter-content a:hover {
+    color: #ffd54f !important;
+    text-decoration: underline;
+}
+
+/* Content boxes for topic pages */
+.content-box {
+    width: 850px;
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+}
+
+.content-box h3 {
+    color: #ffd54f;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.content-box h4 {
+    color: #4dd0e1;
+    margin-top: auto;
+}
+
+.content-box ul {
+    padding-left: 20px;
+}
+
+.content-box li {
+    margin-bottom: auto;
+}
+
+/* Light mode support */
+body.light .content-box {
+    background: rgba(255,255,255,0.95);
+}
+
+body.light .content-box h3 {
+    color: #ff9800;
+}
+
+body.light .content-box h4 {
     color: #00796b;
 }
 
