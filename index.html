@@ -6,15 +6,17 @@
     <title>Probability & Statistics Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  
 
-<!-- Theme Toggle Button -->
+<body>
+
+<!-- Theme Toggle -->
 <div class="theme-toggle" onclick="toggleTheme()">
     <span id="theme-icon">🌙</span>
 </div>
 
 <div class="container">
+
+    <!-- Cover Card -->
     <div class="card">
         <h1>Fundamentals of Probability & Statistics</h1>
         <h2>Academic Portfolio</h2>
@@ -26,13 +28,10 @@
             <p><span>Semester:</span> III (CSE)</p>
             <p><span>Academic Year:</span> 2025–26</p>
         </div>
-
-       
-
-
     </div>
-    
-     <div class="intro">
+
+    <!-- Introduction -->
+    <div class="intro">
         <h3>Introduction to the Course</h3>
         <p>
             Probability and Statistics form the mathematical foundation for analyzing data and dealing with uncertainty.
@@ -41,110 +40,104 @@
             Statistical inference techniques such as estimation and hypothesis testing help in making reliable, data-driven decisions.
         </p>
     </div>
-    
-    <!-- Foundation Section -->
-<div class="foundation">
-    <h3>How This Subject Builds a Foundation for Modern Computing</h3>
-    <p>
-        Probability and Statistics play a crucial role in Artificial Intelligence and Machine Learning by enabling models
-        to learn from data, handle uncertainty, and make predictions based on probability distributions.
-        In Data Science, statistical methods are essential for data exploration, pattern recognition, and hypothesis validation.
-        Networking concepts rely on probability to analyze traffic flow, congestion, and reliability of communication systems.
-        In Software Engineering, statistical techniques support performance analysis, testing, quality assurance, and
-        data-driven decision making throughout the development lifecycle.
-    </p>
-</div>
-<!-- Course Overview Section -->
-<div class="overview">
-    <h3>Course Overview</h3>
-   
-<ul class="chapters">
 
-    <li>
-        <span class="chapter-title">1.Description of data </span>
-        <div class="chapter-content">
-          
-            <ul>
-                <li>Types of data and variables</li>
-                <li>Measures of central tendency (Mean, Median, Mode)</li>
-                <li>Measures of dispersion (Variance, Standard Deviation, Coefficient of Variation)</li>
-                <li>Skewness and data distribution</li>
-                <li>Data visualization: Histograms, Box plots</li>
-            </ul>
-        </div>
-    </li>
+    <!-- Foundation -->
+    <div class="foundation">
+        <h3>How This Subject Builds a Foundation for Modern Computing</h3>
+        <p>
+            Probability and Statistics are essential for Artificial Intelligence and Machine Learning to handle uncertainty
+            and enable predictive modeling. In Data Science, statistical tools support data exploration and validation.
+            Networking relies on probability for traffic and reliability analysis, while Software Engineering uses statistics
+            for performance evaluation, testing, and quality assurance.
+        </p>
+    </div>
 
-    <li>
-        <span class="chapter-title">2. Probability </span>
-        <div class="chapter-content">
-            
-            <ul>
-                <li>Definition and interpretation of probability</li>
-                <li>Types of events</li>
-                <li>Addition and multiplication rules</li>
-                <li>Conditional probability</li>
-                <li>Bayes’ Theorem</li>
-                <li>Bayesian classification</li>
-            </ul>
-        </div>
-    </li>
+    <!-- Course Overview -->
+    <div class="overview">
+        <h3>Course Overview</h3>
 
-    <li>
-        <span class="chapter-title">3. Random variables and Probability Distribution:  </span>
-        <div class="chapter-content">
-            
-            <ul>
-                <li>Discrete vs Continuous random variables</li>
-                <li>Probability Mass Function (PMF)</li>
-                <li>Probability Density Function (PDF)</li>
-                <li>Cumulative Distribution Function (CDF)</li>
-                <li>Binomial, Poisson, and Normal distributions</li>
-            </ul>
-        </div>
-    </li>
+        <ul class="chapters">
 
-    <li>
-        <span class="chapter-title">4. Statistical Inference</span>
-        <div class="chapter-content">
-            <strong>Unit 2: Statistical Inference</strong>
-            <ul>
-                <li>Sampling methods (SRSWR, SRSWOR)</li>
-                <li>Confidence intervals</li>
-                <li>Sample size determination</li>
-                <li>Hypothesis testing:
+            <!-- Chapter 1 -->
+            <li>
+                <span class="chapter-title">1. Description of Data</span>
+                <div class="chapter-content">
                     <ul>
-                        <li>Z-test</li>
-                        <li>t-test</li>
-                        <li>Tests for means and proportions</li>
+                        <li><a href="topics/data-types.html">Types of data and variables</a></li>
+                        <li><a href="topics/central-tendency.html">Measures of central tendency</a></li>
+                        <li><a href="topics/dispersion.html">Measures of dispersion</a></li>
+                        <li><a href="topics/skewness.html">Skewness and data distribution</a></li>
+                        <li><a href="topics/visualization.html">Data visualization</a></li>
                     </ul>
-                </li>
+                </div>
+            </li>
+
+            <!-- Chapter 2 -->
+            <li>
+                <span class="chapter-title">2. Probability</span>
+                <div class="chapter-content">
+                    <ul>
+                        <li><a href="topics/probability-definition.html">Definition of probability</a></li>
+                        <li><a href="topics/types-of-events.html">Types of events</a></li>
+                        <li><a href="topics/probability-rules.html">Addition & multiplication rules</a></li>
+                        <li><a href="topics/conditional-probability.html">Conditional probability</a></li>
+                        <li><a href="topics/bayes-theorem.html">Bayes’ Theorem</a></li>
+                        <li><a href="topics/bayesian-classification.html">Bayesian classification</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- Chapter 3 -->
+            <li>
+                <span class="chapter-title">3. Random Variables & Distributions</span>
+                <div class="chapter-content">
+                    <ul>
+                        <li><a href="topics/random-variables.html">Discrete vs Continuous variables</a></li>
+                        <li><a href="topics/pmf.html">Probability Mass Function (PMF)</a></li>
+                        <li><a href="topics/pdf.html">Probability Density Function (PDF)</a></li>
+                        <li><a href="topics/cdf.html">Cumulative Distribution Function (CDF)</a></li>
+                        <li><a href="topics/distributions.html">Binomial, Poisson, Normal</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- Chapter 4 -->
+            <li>
+                <span class="chapter-title">4. Statistical Inference</span>
+                <div class="chapter-content">
+                    <ul>
+                        <li><a href="topics/sampling.html">Sampling methods</a></li>
+                        <li><a href="topics/confidence-intervals.html">Confidence intervals</a></li>
+                        <li><a href="topics/sample-size.html">Sample size determination</a></li>
+                        <li>
+                            Hypothesis testing:
+                            <ul>
+                                <li><a href="topics/z-test.html">Z-test</a></li>
+                                <li><a href="topics/t-test.html">t-test</a></li>
+                                <li><a href="topics/tests-proportions.html">Tests for means & proportions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
+
+        <!-- Lab Section -->
+        <div class="lab">
+            <h4>Laboratory Work & Practical Learning</h4>
+            <ul>
+                <li>Python-based data analysis</li>
+                <li>Data cleaning and visualization</li>
+                <li>Histogram and boxplot generation</li>
+                <li>Hypothesis testing using real datasets</li>
             </ul>
         </div>
-    </li>
 
-</ul>
-
-<!-- Laboratory Section -->
-<div class="lab">
-    <h4>Laboratory Work & Practical Learning</h4>
-    <ul>
-        <li>Python-based data analysis</li>
-        <li>Data cleaning and visualization</li>
-        <li>Histogram and boxplot generation</li>
-        <li>Hypothesis testing using real datasets</li>
-    </ul>
-</div>
-
-
-
-
-    
+    </div>
 
 </div>
 
 <script src="script.js"></script>
 </body>
-
-
-
 </html>
