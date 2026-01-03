@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditional Probability</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Common stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .formula {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 18px 0;
+            color: #ffd54f;
+        }
+
+        body.light .formula {
+            color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+
+<div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+</div>
+
+<div class="container">
+
+    
+
+    <!-- INTRODUCTION -->
+    <div class="content-box">
+        <h3>Conditional Probability</h3>
+        <p>
+            Conditional probability deals with the probability of occurrence of an event
+            when another related event has already occurred. It allows us to update the
+            likelihood of an event based on additional information.
+        </p>
+        <p>
+            This concept plays a crucial role in engineering, data science, machine learning,
+            reliability analysis, and decision-making under uncertainty.
+        </p>
+    </div>
+
+    <!-- DEFINITION -->
+    <div class="content-box">
+        <h3>Definition</h3>
+        <p>
+            The conditional probability of an event <strong>A</strong> given that another
+            event <strong>B</strong> has occurred is denoted by <strong>P(A | B)</strong>.
+        </p>
+
+        <p class="formula">
+            P(A | B) = P(A ∩ B) / P(B), &nbsp; P(B) ≠ 0
+        </p>
+
+        <p>
+            This formula indicates that conditional probability is the ratio of the
+            probability of both events occurring together to the probability of the
+            conditioning event.
+        </p>
+    </div>
+
+    <!-- INTUITIVE MEANING -->
+    <div class="content-box">
+        <h3>Interpretation (Intuitive Meaning)</h3>
+        <p>
+            When we say <strong>P(A | B)</strong>, we restrict the sample space to only
+            those outcomes where event B has already occurred. Within this reduced
+            sample space, we then determine the likelihood of event A.
+        </p>
+    </div>
+
+    <!-- EXAMPLE 1 -->
+    <div class="content-box">
+        <h3>Example 1: Drawing Cards</h3>
+        <p>
+            Two cards are drawn successively from a deck of 52 cards without replacement.
+        </p>
+
+        <ul>
+            <li>Event A: Second card is an Ace</li>
+            <li>Event B: First card is an Ace</li>
+        </ul>
+
+        <p>
+            Given that the first card is an Ace, the number of remaining cards is 51,
+            out of which 3 are Aces.
+        </p>
+
+        <p class="formula">
+            P(A | B) = 3 / 51
+        </p>
+    </div>
+
+    <!-- EXAMPLE 2 -->
+    <div class="content-box">
+        <h3>Example 2: Defective Components</h3>
+        <p>
+            A box contains 10 components, out of which 2 are defective.
+            Two components are selected at random without replacement.
+        </p>
+
+        <ul>
+            <li>Event A: Second component is defective</li>
+            <li>Event B: First component is defective</li>
+        </ul>
+
+        <p class="formula">
+            P(A | B) = 1 / 9
+        </p>
+
+        <p>
+            Since one defective component has already been selected,
+            only one defective remains among the remaining 9 components.
+        </p>
+    </div>
+
+    <!-- RELATION TO INDEPENDENCE -->
+    <div class="content-box">
+        <h3>Relation Between Conditional Probability and Independence</h3>
+        <p>
+            Two events A and B are said to be independent if the occurrence of one event
+            does not affect the probability of the other.
+        </p>
+
+        <p class="formula">
+            P(A | B) = P(A)
+        </p>
+
+        <p>
+            If this condition holds, then events A and B are independent.
+            Otherwise, they are dependent.
+        </p>
+    </div>
+
+    <!-- APPLICATIONS -->
+    <div class="content-box">
+        <h3>Applications of Conditional Probability</h3>
+        <ul>
+            <li>Machine learning and Bayesian classifiers</li>
+            <li>Reliability engineering and fault diagnosis</li>
+            <li>Medical diagnosis and testing</li>
+            <li>Network traffic and communication systems</li>
+            <li>Risk assessment and decision making</li>
+        </ul>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="content-box">
+        <h3>Conclusion</h3>
+        <p>
+            Conditional probability provides a powerful framework to analyze events
+            under partial information. It forms the foundation for advanced concepts
+            such as Bayes’ theorem and probabilistic modeling in engineering and data science.
+        </p>
+    </div>
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
