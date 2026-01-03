@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Measures of Dispersion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Use same stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+</div>
+
+<div class="container">
+
+   
+    <!-- INTRO -->
+    <div class="content-box">
+        <h3>Measures of Dispersion</h3>
+        <p>
+            Measures of dispersion describe the extent to which data values are spread or scattered
+            around a central value. While measures of central tendency indicate the average behavior,
+            dispersion measures help assess variability, consistency, and reliability of data.
+        </p>
+        <p>
+            In engineering, dispersion is crucial for performance analysis, quality control,
+            reliability testing, and data-driven modeling.
+        </p>
+    </div>
+
+    <!-- RANGE -->
+    <div class="content-box">
+        <h3>1. Range</h3>
+        <p>
+            Range is the simplest measure of dispersion and represents the difference between
+            the maximum and minimum values of a dataset.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center;">
+            Range = Maximum value − Minimum value
+        </p>
+
+        <p><strong>Example (Discrete Data):</strong></p>
+        <ul>
+            <li>Data: 10, 20, 35, 50, 60</li>
+            <li>Range = 60 − 10 = <strong>50</strong></li>
+        </ul>
+
+        <p>
+            Range provides a quick estimate of spread but is highly sensitive to extreme values.
+        </p>
+    </div>
+
+    <!-- VARIANCE -->
+    <div class="content-box">
+        <h3>2. Variance</h3>
+
+        <h4>Variance for Discrete Data</h4>
+        <p>
+            Variance measures the average squared deviation of each observation from the mean.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center;">
+            σ² = Σ(x − x̄)² / n
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Data: 2, 4, 6</li>
+            <li>Mean = 4</li>
+            <li>Variance = [(2−4)² + (4−4)² + (6−4)²] / 3 = 8 / 3</li>
+        </ul>
+
+        <h4>Variance for Continuous (Grouped) Data</h4>
+        <p>
+            Variance for grouped data uses class midpoints and frequencies.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center;">
+            σ² = Σf(x − x̄)² / Σf
+        </p>
+
+        <p>
+            Variance is widely used in signal processing, control systems, and data modeling.
+        </p>
+    </div>
+
+    <!-- STANDARD DEVIATION -->
+    <div class="content-box">
+        <h3>3. Standard Deviation</h3>
+        <p>
+            Standard deviation is the square root of variance and expresses dispersion in the
+            same units as the original data, making it easier to interpret.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center;">
+            σ = √σ²
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>If variance = 9</li>
+            <li>Standard deviation = √9 = <strong>3</strong></li>
+        </ul>
+
+        <p>
+            A smaller standard deviation indicates data values are closer to the mean,
+            while a larger value indicates greater variability.
+        </p>
+    </div>
+
+    <!-- COEFFICIENT OF VARIATION -->
+    <div class="content-box">
+        <h3>4. Coefficient of Variation (CV)</h3>
+        <p>
+            The coefficient of variation is a relative measure of dispersion that compares
+            the standard deviation with the mean.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center;">
+            CV = (σ / x̄) × 100
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Mean = 50, Standard Deviation = 5</li>
+            <li>CV = (5 / 50) × 100 = <strong>10%</strong></li>
+        </ul>
+
+        <p>
+            CV is useful for comparing variability between datasets with different units or means,
+            such as comparing machine efficiency or system performance.
+        </p>
+    </div>
+
+    <!-- COMPARISON -->
+    <div class="content-box">
+        <h3>Importance of Measures of Dispersion</h3>
+        <ul>
+            <li>Help assess consistency and reliability of data</li>
+            <li>Support risk analysis and quality assurance</li>
+            <li>Essential in AI, ML, and data science models</li>
+            <li>Used in network traffic analysis and performance tuning</li>
+        </ul>
+
+        <p>
+            Measures of dispersion complement measures of central tendency and together
+            provide a complete statistical description of data.
+        </p>
+    </div>
+ <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
