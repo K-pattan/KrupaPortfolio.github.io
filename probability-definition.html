@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Definition and Interpretation of Probability</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Common stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+</div>
+
+<div class="container">
+
+    
+
+    <!-- INTRODUCTION -->
+    <div class="content-box">
+        <h3>Definition and Interpretation of Probability</h3>
+        <p>
+            Probability is a numerical measure that quantifies the likelihood of occurrence
+            of an event in a random experiment. It provides a mathematical framework to
+            analyze uncertainty and predict outcomes based on available information.
+        </p>
+        <p>
+            In engineering and data science, probability is fundamental for modeling
+            uncertain systems, decision-making, and risk assessment.
+        </p>
+    </div>
+
+    <!-- DEFINITION -->
+    <div class="content-box">
+        <h3>Definition of Probability</h3>
+        <p>
+            Probability of an event is defined as the ratio of the number of favorable outcomes
+            to the total number of equally likely outcomes.
+        </p>
+
+        <p><strong>Mathematical Definition:</strong></p>
+        <p style="text-align:center;">
+            P(A) = Number of favorable outcomes / Total number of outcomes
+        </p>
+
+        <p>
+            The value of probability always lies between 0 and 1:
+        </p>
+        <ul>
+            <li>P(A) = 0 → Event is impossible</li>
+            <li>P(A) = 1 → Event is certain</li>
+            <li>0 &lt; P(A) &lt; 1 → Event is uncertain</li>
+        </ul>
+    </div>
+
+    <!-- INTERPRETATIONS -->
+    <div class="content-box">
+        <h3>Interpretation of Probability</h3>
+        <p>
+            Probability can be interpreted in different ways depending on the nature of
+            the experiment and available information. The main interpretations are:
+        </p>
+
+        <h4>1. Classical Interpretation</h4>
+        <p>
+            This interpretation applies when all outcomes of an experiment are equally likely.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center;">
+            P(A) = n(A) / n(S)
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Experiment: Tossing a fair die</li>
+            <li>Event A: Getting an even number</li>
+            <li>Favorable outcomes = {2, 4, 6}</li>
+            <li>Total outcomes = 6</li>
+            <li>P(A) = 3/6 = <strong>1/2</strong></li>
+        </ul>
+
+        <h4>2. Empirical (Relative Frequency) Interpretation</h4>
+        <p>
+            Probability is defined as the ratio of the number of times an event occurs
+            to the total number of trials, when the experiment is repeated a large number
+            of times.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center;">
+            P(A) = lim (Number of times A occurs / Total trials)
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>A machine produces defective items 20 times in 1000 trials</li>
+            <li>Probability of defect = 20 / 1000 = <strong>0.02</strong></li>
+        </ul>
+
+        <h4>3. Subjective Interpretation</h4>
+        <p>
+            Subjective probability is based on personal judgment, experience, or belief
+            rather than mathematical calculation.
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Probability of rain tomorrow based on weather forecast = 0.7</li>
+            <li>Probability of project completion on time based on experience = 0.8</li>
+        </ul>
+    </div>
+
+    <!-- PROPERTIES -->
+    <div class="content-box">
+        <h3>Properties of Probability</h3>
+        <ul>
+            <li>0 ≤ P(A) ≤ 1</li>
+            <li>P(S) = 1 (where S is the sample space)</li>
+            <li>P(Ø) = 0 (impossible event)</li>
+            <li>If A and B are mutually exclusive, P(A ∪ B) = P(A) + P(B)</li>
+        </ul>
+    </div>
+
+    <!-- APPLICATIONS -->
+    <div class="content-box">
+        <h3>Applications of Probability</h3>
+        <ul>
+            <li>Risk analysis and reliability engineering</li>
+            <li>Machine learning and artificial intelligence</li>
+            <li>Network traffic modeling</li>
+            <li>Quality control and defect prediction</li>
+            <li>Weather forecasting and decision-making</li>
+            <li>Financial modeling and investment analysis</li>
+        </ul>
+
+        <p>
+            Probability enables engineers and analysts to make informed decisions
+            under uncertainty and optimize system performance.
+        </p>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="content-box">
+        <h3>Summary</h3>
+        <p>
+            Probability provides a quantitative measure of uncertainty and forms the foundation
+            of statistics, data science, and predictive modeling. Its interpretations allow
+            flexibility in application across theoretical and real-world problems.
+        </p>
+    </div>
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
