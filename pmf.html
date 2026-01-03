@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Probability Mass Function (PMF)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+</div>
+
+<div class="container">
+
+    <div class="content-box">
+        <h3>Probability Mass Function (PMF)</h3>
+
+        <p>
+            A <strong>Probability Mass Function (PMF)</strong> describes the probability distribution 
+            of a <strong>discrete random variable</strong>. It assigns a probability to 
+            <strong>each possible value</strong> the random variable can take.
+        </p>
+
+        <p>
+            PMFs are widely used in <strong>probability theory, statistics, machine learning, 
+            queueing theory, and reliability engineering</strong>.
+        </p>
+    </div>
+
+    <div class="content-box">
+        <h3>Mathematical Definition</h3>
+
+        <p>
+            Let <strong>X</strong> be a discrete random variable.  
+            The Probability Mass Function is defined as:
+        </p>
+
+        <p style="text-align:center; font-size:20px; font-weight:bold;">
+            P(X = x) = f(x)
+        </p>
+
+        <p>
+            where:
+        </p>
+
+        <ul>
+            <li><strong>f(x) ≥ 0</strong> for all x</li>
+            <li><strong>Σ f(x) = 1</strong> (sum over all possible x)</li>
+        </ul>
+    </div>
+
+    <div class="content-box">
+        <h3>Key Properties of PMF</h3>
+
+        <ul>
+            <li>Defined only for <strong>discrete random variables</strong></li>
+            <li>Each probability lies between 0 and 1</li>
+            <li>Total probability equals 1</li>
+            <li>Graph is represented using <strong>separate vertical bars</strong></li>
+        </ul>
+    </div>
+
+    <div class="content-box">
+        <h3>Worked Example (Solved)</h3>
+
+        <p><strong>Problem:</strong></p>
+        <p>
+            A fair die is thrown once. Let X be the number obtained.
+        </p>
+
+        <p><strong>Solution:</strong></p>
+
+        <p>
+            Possible values of X are:
+        </p>
+
+        <p style="text-align:center; font-weight:bold;">
+            X = {1, 2, 3, 4, 5, 6}
+        </p>
+
+        <p>
+            Since the die is fair:
+        </p>
+
+        <p style="text-align:center; font-size:18px; font-weight:bold;">
+            P(X = x) = 1/6  for each x
+        </p>
+
+        <p>
+            This defines the PMF of X.
+        </p>
+    </div>
+
+    <div class="content-box">
+        <h3>PMF Table for the Die Example</h3>
+
+        <table style="width:100%; border-collapse:collapse; text-align:center;">
+            <tr style="border-bottom:2px solid #ffd54f;">
+                <th>X</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+            </tr>
+            <tr>
+                <td><strong>P(X = x)</strong></td>
+                <td>1/6</td>
+                <td>1/6</td>
+                <td>1/6</td>
+                <td>1/6</td>
+                <td>1/6</td>
+                <td>1/6</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="content-box">
+        <h3>Graphical Representation of PMF</h3>
+
+        <p>
+            The graph of a PMF consists of <strong>vertical bars</strong> at discrete values of X.
+            The bars do not touch each other, emphasizing the discrete nature.
+        </p>
+
+        <canvas id="pmfChart" width="700" height="350" style="display:block; margin:20px auto;"></canvas>
+    </div>
+
+    <div class="content-box">
+        <h3>Applications of PMF</h3>
+
+        <ul>
+            <li>🎲 Modeling dice, cards, and lotteries</li>
+            <li>📊 Discrete probability distributions (Binomial, Poisson)</li>
+            <li>📦 Quality control and defect analysis</li>
+            <li>📡 Network packet transmission analysis</li>
+            <li>🤖 Machine learning (Naïve Bayes models)</li>
+        </ul>
+    </div>
+
+    <div class="content-box">
+        <h3>PMF vs PDF (Quick Note)</h3>
+
+        <ul>
+            <li><strong>PMF</strong> → Discrete random variables</li>
+            <li><strong>PDF</strong> → Continuous random variables</li>
+            <li>PMF uses summation, PDF uses integration</li>
+        </ul>
+    </div>
+
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+/* PMF Graph using Canvas */
+const canvas = document.getElementById("pmfChart");
+const ctx = canvas.getContext("2d");
+
+const values = [1, 2, 3, 4, 5, 6];
+const probs = [1/6, 1/6, 1/6, 1/6, 1/6, 1/6];
+
+const baseY = 300;
+const scaleY = 800;
+const barWidth = 40;
+const gap = 50;
+
+ctx.font = "14px Times New Roman";
+ctx.strokeStyle = "#ffffff";
+ctx.fillStyle = "#ffd54f";
+
+// Axes
+ctx.beginPath();
+ctx.moveTo(50, 20);
+ctx.lineTo(50, baseY);
+ctx.lineTo(650, baseY);
+ctx.stroke();
+
+// Bars
+values.forEach((x, i) => {
+    const barHeight = probs[i] * scaleY;
+    const xPos = 80 + i * gap;
+
+    ctx.fillRect(xPos, baseY - barHeight, barWidth, barHeight);
+    ctx.strokeRect(xPos, baseY - barHeight, barWidth, barHeight);
+
+    ctx.fillText(x, xPos + 12, baseY + 20);
+    ctx.fillText("1/6", xPos + 6, baseY - barHeight - 10);
+});
+
+// Axis labels
+ctx.fillText("X", 660, baseY + 5);
+ctx.fillText("P(X)", 15, 15);
+</script>
+
+</body>
+</html>
