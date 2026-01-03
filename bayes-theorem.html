@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bayes' Theorem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Common stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .formula {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 18px 0;
+            color: #ffd54f;
+        }
+
+        body.light .formula {
+            color: #ff9800;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+</div>
+
+<div class="container">
+
+   
+
+    <!-- INTRODUCTION -->
+    <div class="content-box">
+        <h3>Bayes’ Theorem</h3>
+        <p>
+            Bayes’ Theorem is a fundamental result in probability theory that provides a
+            method for updating the probability of an event based on new information.
+            It relates conditional probabilities of events and allows reverse inference.
+        </p>
+        <p>
+            This theorem forms the backbone of Bayesian statistics, machine learning,
+            artificial intelligence, and decision-making systems.
+        </p>
+    </div>
+
+    <!-- STATEMENT -->
+    <div class="content-box">
+        <h3>Statement of Bayes’ Theorem</h3>
+        <p>
+            If A and B are two events such that P(B) ≠ 0, then the conditional probability
+            of A given B is given by:
+        </p>
+
+        <p class="formula">
+            P(A | B) = [ P(B | A) × P(A) ] / P(B)
+        </p>
+
+        <p>
+            This formula allows us to compute the probability of a cause (A) given
+            the observed effect (B).
+        </p>
+    </div>
+
+    <!-- TERMS -->
+    <div class="content-box">
+        <h3>Explanation of Terms</h3>
+        <ul>
+            <li><strong>P(A)</strong> – Prior probability of event A</li>
+            <li><strong>P(B | A)</strong> – Likelihood of observing B when A occurs</li>
+            <li><strong>P(B)</strong> – Total probability of event B</li>
+            <li><strong>P(A | B)</strong> – Posterior probability of A given B</li>
+        </ul>
+    </div>
+
+    <!-- NUMERICAL QUESTION -->
+    <div class="content-box">
+        <h3>Numerical Example</h3>
+
+        <p class="question">Question:</p>
+        <p>
+            Three machines A, B, and C produce 25%, 35%, and 40% of the total output
+            of a factory respectively. The percentage of defective items produced by
+            these machines is 5%, 4%, and 2% respectively.
+        </p>
+        <p>
+            An item is selected at random and is found to be defective.
+            Find the probability that it was produced by machine B.
+        </p>
+
+        <p class="question">Solution:</p>
+
+        <p>
+            Let:
+        </p>
+        <ul>
+            <li>A₁: Item produced by Machine A</li>
+            <li>A₂: Item produced by Machine B</li>
+            <li>A₃: Item produced by Machine C</li>
+            <li>D: Item is defective</li>
+        </ul>
+
+        <p>
+            Given:
+        </p>
+        <ul>
+            <li>P(A₁) = 0.25</li>
+            <li>P(A₂) = 0.35</li>
+            <li>P(A₃) = 0.40</li>
+            <li>P(D | A₁) = 0.05</li>
+            <li>P(D | A₂) = 0.04</li>
+            <li>P(D | A₃) = 0.02</li>
+        </ul>
+
+        <p>
+            First, compute P(D) using the law of total probability:
+        </p>
+
+        <p class="formula">
+            P(D) = (0.05×0.25) + (0.04×0.35) + (0.02×0.40)
+        </p>
+
+        <p class="formula">
+            P(D) = 0.0125 + 0.014 + 0.008 = 0.0345
+        </p>
+
+        <p>
+            Now apply Bayes’ Theorem:
+        </p>
+
+        <p class="formula">
+            P(A₂ | D) = (0.04 × 0.35) / 0.0345
+        </p>
+
+        <p class="formula">
+            P(A₂ | D) ≈ 0.4058
+        </p>
+
+        <p>
+            <strong>Answer:</strong> The probability that the defective item was produced
+            by Machine B is approximately <strong>0.406</strong>.
+        </p>
+    </div>
+
+    <!-- APPLICATIONS -->
+    <div class="content-box">
+        <h3>Applications of Bayes’ Theorem</h3>
+        <ul>
+            <li>Medical diagnosis and disease prediction</li>
+            <li>Machine learning and Bayesian classification</li>
+            <li>Spam filtering and email classification</li>
+            <li>Fault detection in engineering systems</li>
+            <li>Risk analysis and decision support systems</li>
+        </ul>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="content-box">
+        <h3>Conclusion</h3>
+        <p>
+            Bayes’ Theorem provides a systematic method to update probabilities in
+            the presence of new evidence. It plays a vital role in modern computing
+            systems where learning from data and uncertainty handling are essential.
+        </p>
+    </div>
+ <a href="index.html" class="back-button">← Back to Course Overview</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
