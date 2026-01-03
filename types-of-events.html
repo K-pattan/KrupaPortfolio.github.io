@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selected Types of Events in Probability</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Common stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+</div>
+
+<div class="container">
+
+    
+
+    <!-- INTRO -->
+    <div class="content-box">
+        <h3>Types of Events in Probability</h3>
+        <p>
+            An event in probability is a set of outcomes of a random experiment.
+            Understanding different types of events helps in selecting the correct
+            probability rules and modeling real-world uncertain situations.
+        </p>
+    </div>
+
+    <!-- 1. EQUALLY LIKELY EVENTS -->
+    <div class="content-box">
+        <h3>1. Equally Likely Events</h3>
+        <p>
+            Events are said to be <strong>equally likely</strong> when each event has
+            the same probability of occurrence.
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Experiment: Rolling a fair die</li>
+            <li>Sample space: {1, 2, 3, 4, 5, 6}</li>
+            <li>Each outcome has probability = 1/6</li>
+        </ul>
+
+        <p>
+            Equally likely events are commonly used in classical probability problems.
+        </p>
+    </div>
+
+    <!-- 2. COMPLEMENTARY EVENT -->
+    <div class="content-box">
+        <h3>2. Complementary Event</h3>
+        <p>
+            The complement of an event A is the event that A does not occur.
+            It is denoted by A′.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center;">
+            P(A′) = 1 − P(A)
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Event A: Getting a head in a coin toss</li>
+            <li>P(A) = 1/2</li>
+            <li>P(A′) = 1 − 1/2 = <strong>1/2</strong></li>
+        </ul>
+
+        <p>
+            Complementary events help simplify probability calculations.
+        </p>
+    </div>
+
+    <!-- 3. MUTUALLY EXCLUSIVE EVENTS -->
+    <div class="content-box">
+        <h3>3. Mutually Exclusive (Disjoint) Events</h3>
+        <p>
+            Two events are said to be <strong>mutually exclusive</strong> if they
+            cannot occur at the same time.
+        </p>
+
+        <p><strong>Property:</strong></p>
+        <p style="text-align:center;">
+            P(A ∩ B) = 0
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Experiment: Tossing a coin</li>
+            <li>Events: Head (H) and Tail (T)</li>
+            <li>H and T cannot occur together</li>
+        </ul>
+
+        <p>
+            Mutually exclusive events are important in applying the addition theorem
+            of probability.
+        </p>
+    </div>
+
+    <!-- 4. INDEPENDENT EVENTS -->
+    <div class="content-box">
+        <h3>4. Independent Events</h3>
+        <p>
+            Two events are independent if the occurrence of one event does not
+            affect the probability of the other event.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center;">
+            P(A ∩ B) = P(A) × P(B)
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Experiment: Tossing a coin and rolling a die</li>
+            <li>Event A: Getting a head</li>
+            <li>Event B: Getting a 4</li>
+            <li>P(A ∩ B) = (1/2) × (1/6) = <strong>1/12</strong></li>
+        </ul>
+
+        <p>
+            Independent events are widely used in probability models and machine learning.
+        </p>
+    </div>
+
+    <!-- 5. DEPENDENT EVENTS -->
+    <div class="content-box">
+        <h3>5. Dependent Events</h3>
+        <p>
+            Two events are dependent if the occurrence of one event affects the
+            probability of the other event.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center;">
+            P(A ∩ B) = P(A) × P(B | A)
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Experiment: Drawing two cards successively without replacement</li>
+            <li>Event A: First card is an Ace</li>
+            <li>Event B: Second card is an Ace</li>
+            <li>P(B | A) = 3/51</li>
+        </ul>
+
+        <p>
+            Dependent events are commonly encountered in sampling without replacement
+            and real-world decision processes.
+        </p>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="content-box">
+        <h3>Summary</h3>
+        <p>
+            Understanding these types of events helps in applying probability laws
+            correctly and modeling uncertainty effectively in engineering and data science.
+        </p>
+    </div>
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
