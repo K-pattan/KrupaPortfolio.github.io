@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Visualization: Histograms and Box Plots</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Common stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+</div>
+
+<div class="container">
+
+    
+
+    <!-- INTRO -->
+    <div class="content-box">
+        <h3>Data Visualization</h3>
+        <p>
+            Data visualization is the graphical representation of data to understand patterns,
+            trends, distributions, and anomalies. Visual tools such as histograms and box plots
+            help transform raw numerical data into meaningful insights.
+        </p>
+    </div>
+
+    <!-- ================= HISTOGRAM ================= -->
+    <div class="content-box">
+        <h3>Histogram</h3>
+        <p>
+            A histogram represents the frequency distribution of continuous data.
+            Data is grouped into class intervals, and rectangles are drawn whose heights
+            represent frequencies.
+        </p>
+
+        <h4>Example</h4>
+        <p>
+            Consider marks obtained by students in an exam:
+        </p>
+        <ul>
+            <li>Marks: 40, 45, 50, 55, 60, 60, 65, 70, 75, 80</li>
+        </ul>
+
+        <p>
+            Class intervals of width 10 are formed:
+        </p>
+        <ul>
+            <li>40–50 : 2</li>
+            <li>50–60 : 3</li>
+            <li>60–70 : 3</li>
+            <li>70–80 : 2</li>
+        </ul>
+
+        <h4>Histogram Representation</h4>
+
+        <!-- HISTOGRAM SVG -->
+        <svg width="100%" height="220" viewBox="0 0 600 220">
+            <!-- Axes -->
+            <line x1="50" y1="180" x2="550" y2="180" stroke="white"/>
+            <line x1="50" y1="20" x2="50" y2="180" stroke="white"/>
+
+            <!-- Bars -->
+            <rect x="80" y="120" width="80" height="60" fill="#ffd54f"/>
+            <rect x="180" y="90" width="80" height="90" fill="#ffd54f"/>
+            <rect x="280" y="90" width="80" height="90" fill="#ffd54f"/>
+            <rect x="380" y="120" width="80" height="60" fill="#ffd54f"/>
+
+            <!-- Labels -->
+            <text x="90" y="200" fill="white">40–50</text>
+            <text x="190" y="200" fill="white">50–60</text>
+            <text x="290" y="200" fill="white">60–70</text>
+            <text x="390" y="200" fill="white">70–80</text>
+
+            <text x="10" y="30" fill="white">Frequency</text>
+            <text x="520" y="200" fill="white">Marks</text>
+        </svg>
+
+        <h4>Applications of Histogram</h4>
+        <ul>
+            <li>Analyzing data distribution</li>
+            <li>Identifying skewness</li>
+            <li>Quality control in manufacturing</li>
+            <li>Performance analysis in engineering systems</li>
+        </ul>
+    </div>
+
+    <!-- ================= BOX PLOT ================= -->
+    <div class="content-box">
+        <h3>Box Plot</h3>
+        <p>
+            A box plot (box-and-whisker plot) is a graphical representation based on
+            the five-number summary: minimum, first quartile (Q₁), median (Q₂),
+            third quartile (Q₃), and maximum.
+        </p>
+
+        <h4>Example</h4>
+        <p>
+            Consider the dataset:
+        </p>
+        <ul>
+            <li>Data: 10, 20, 25, 30, 35, 40, 45</li>
+            <li>Minimum = 10</li>
+            <li>Q₁ = 20</li>
+            <li>Median (Q₂) = 30</li>
+            <li>Q₃ = 40</li>
+            <li>Maximum = 45</li>
+        </ul>
+
+        <h4>Box Plot Representation</h4>
+
+        <!-- BOX PLOT SVG -->
+        <svg width="100%" height="160" viewBox="0 0 600 160">
+            <!-- Horizontal line -->
+            <line x1="80" y1="80" x2="520" y2="80" stroke="white"/>
+
+            <!-- Box -->
+            <rect x="200" y="50" width="200" height="60"
+                  fill="rgba(255,213,79,0.6)" stroke="#ffd54f"/>
+
+            <!-- Median -->
+            <line x1="300" y1="50" x2="300" y2="110" stroke="#4dd0e1" stroke-width="3"/>
+
+            <!-- Whiskers -->
+            <line x1="80" y1="80" x2="200" y2="80" stroke="white"/>
+            <line x1="400" y1="80" x2="520" y2="80" stroke="white"/>
+
+            <!-- Labels -->
+            <text x="70" y="120" fill="white">Min</text>
+            <text x="190" y="120" fill="white">Q₁</text>
+            <text x="290" y="120" fill="white">Median</text>
+            <text x="390" y="120" fill="white">Q₃</text>
+            <text x="510" y="120" fill="white">Max</text>
+        </svg>
+
+        <h4>Applications of Box Plot</h4>
+        <ul>
+            <li>Detecting outliers</li>
+            <li>Comparing multiple datasets</li>
+            <li>Understanding data spread and symmetry</li>
+            <li>Exploratory Data Analysis (EDA) in ML</li>
+        </ul>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="content-box">
+        <h3>Importance of Data Visualization</h3>
+        <ul>
+            <li>Simplifies complex datasets</li>
+            <li>Reveals patterns and trends</li>
+            <li>Supports decision-making</li>
+            <li>Essential in Data Science, AI, and Engineering analysis</li>
+        </ul>
+    </div>
+<a href="index.html" class="back-button">← Back to Course Overview</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
