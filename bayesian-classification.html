@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bayesian Classification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+   
+
+    <div class="content-box">
+        <h3>Bayesian Classification</h3>
+
+        <p>
+            <strong>Bayesian Classification</strong> is a statistical classification technique based on 
+            <strong>Bayes’ Theorem</strong>. It assigns a data point to the class that has the 
+            <strong>highest posterior probability</strong> given the observed features.
+        </p>
+
+        <p>
+            It is widely used in <strong>machine learning, data science, pattern recognition, 
+            spam detection, medical diagnosis</strong>, and other decision-making systems.
+        </p>
+    </div>
+
+    <div class="content-box">
+        <h3>Basic Idea of Bayesian Classification</h3>
+
+        <p>
+            Suppose we have a data point with features <strong>X</strong> and a set of possible classes 
+            <strong>C₁, C₂, …, Cₖ</strong>.  
+            Bayesian classification computes:
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            P(Cᵢ | X) for each class Cᵢ
+        </p>
+
+        <p>
+            The data point is assigned to the class with the <strong>maximum posterior probability</strong>.
+        </p>
+    </div>
+
+    <div class="content-box">
+        <h3>Bayes’ Theorem (Used in Classification)</h3>
+
+        <p>
+            Bayes’ Theorem relates prior knowledge with observed data:
+        </p>
+
+        <p style="text-align:center; font-size:20px; font-weight:bold;">
+            P(C | X) = [ P(X | C) × P(C) ] / P(X)
+        </p>
+
+        <ul>
+            <li><strong>P(C | X)</strong> → Posterior probability (after observing data)</li>
+            <li><strong>P(X | C)</strong> → Likelihood (how likely data belongs to class)</li>
+            <li><strong>P(C)</strong> → Prior probability of class</li>
+            <li><strong>P(X)</strong> → Evidence (normalizing constant)</li>
+        </ul>
+    </div>
+
+    <div class="content-box">
+        <h3>Decision Rule (MAP Rule)</h3>
+
+        <p>
+            Since <strong>P(X)</strong> is the same for all classes, it can be ignored during comparison.
+        </p>
+
+        <p style="text-align:center; font-size:18px; font-weight:bold;">
+            Choose class Cᵢ that maximizes:  
+            P(X | Cᵢ) × P(Cᵢ)
+        </p>
+    </div>
+
+    <div class="content-box">
+        <h3>Worked Example (Solved)</h3>
+
+        <p><strong>Problem:</strong></p>
+        <p>
+            A company receives emails. Based on past data:
+        </p>
+
+        <ul>
+            <li>P(Spam) = 0.4</li>
+            <li>P(Not Spam) = 0.6</li>
+            <li>P(Word = "Offer" | Spam) = 0.7</li>
+            <li>P(Word = "Offer" | Not Spam) = 0.2</li>
+        </ul>
+
+        <p>
+            If a new email contains the word <strong>"Offer"</strong>, classify it.
+        </p>
+
+        <p><strong>Solution:</strong></p>
+
+        <p>
+            Calculate posterior probabilities:
+        </p>
+
+        <p>
+            P(Spam | Offer) ∝ 0.7 × 0.4 = 0.28
+        </p>
+
+        <p>
+            P(Not Spam | Offer) ∝ 0.2 × 0.6 = 0.12
+        </p>
+
+        <p>
+            Since <strong>0.28 &gt; 0.12</strong>, the email is classified as:
+        </p>
+
+        <p style="font-size:18px; font-weight:bold; text-align:center;">
+            ✅ Spam
+        </p>
+    </div>
+
+    <div class="content-box">
+        <h3>Naïve Bayes Classifier</h3>
+
+        <p>
+            In practice, Bayesian classification often assumes that features are 
+            <strong>conditionally independent</strong> given the class. This leads to the 
+            <strong>Naïve Bayes Classifier</strong>.
+        </p>
+
+        <p style="text-align:center; font-size:18px; font-weight:bold;">
+            P(C | X₁, X₂, …, Xₙ) ∝ P(C) × Π P(Xᵢ | C)
+        </p>
+
+        <p>
+            Despite the “naïve” assumption, it performs remarkably well in many real-world problems.
+        </p>
+    </div>
+
+    <div class="content-box">
+        <h3>Applications of Bayesian Classification</h3>
+
+        <ul>
+            <li>📧 Email spam filtering</li>
+            <li>🩺 Medical diagnosis (disease prediction)</li>
+            <li>🛍️ Recommendation systems</li>
+            <li>📊 Document and text classification</li>
+            <li>🔍 Image and speech recognition</li>
+            <li>💳 Fraud detection</li>
+        </ul>
+    </div>
+
+    <div class="content-box">
+        <h3>Advantages and Limitations</h3>
+
+        <h4>Advantages</h4>
+        <ul>
+            <li>Simple and fast to compute</li>
+            <li>Works well with small datasets</li>
+            <li>Handles uncertainty mathematically</li>
+        </ul>
+
+        <h4>Limitations</h4>
+        <ul>
+            <li>Independence assumption may not always hold</li>
+            <li>Requires accurate prior probabilities</li>
+        </ul>
+    </div>
+     <!-- Back button -->
+    <a href="index.html" class="back-button">← Back to Course</a>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
