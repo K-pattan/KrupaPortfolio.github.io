@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discrete vs Continuous Random Variables</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+</div>
+
+<div class="container">
+
+    <div class="content-box">
+        <h3>Random Variables</h3>
+
+        <p>
+            A <strong>random variable</strong> is a numerical quantity whose value depends on the outcome
+            of a random experiment. Random variables are used to quantify uncertainty in probabilistic
+            and statistical analysis.
+        </p>
+
+        <p>
+            Random variables are broadly classified into:
+        </p>
+
+        <ul>
+            <li><strong>Discrete Random Variables</strong></li>
+            <li><strong>Continuous Random Variables</strong></li>
+        </ul>
+    </div>
+
+    <div class="content-box">
+        <h3>Discrete Random Variables</h3>
+
+        <p>
+            A <strong>discrete random variable</strong> takes a <strong>finite or countably infinite</strong>
+            number of distinct values. These values can be listed individually.
+        </p>
+
+        <p><strong>Examples:</strong></p>
+        <ul>
+            <li>Number of heads obtained when tossing coins</li>
+            <li>Number of defective items in a batch</li>
+            <li>Number of students present in a classroom</li>
+        </ul>
+
+        <p>
+            The probability distribution of a discrete random variable is described using a
+            <strong>Probability Mass Function (PMF)</strong>.
+        </p>
+
+        <p style="text-align:center; font-size:18px; font-weight:bold;">
+            P(X = xᵢ) = pᵢ
+        </p>
+
+        <p>
+            where:
+        </p>
+
+        <ul>
+            <li>0 ≤ pᵢ ≤ 1</li>
+            <li>∑ pᵢ = 1</li>
+        </ul>
+
+        <p>
+            <strong>Mean (Expected Value):</strong>
+        </p>
+
+        <p style="text-align:center; font-size:18px; font-weight:bold;">
+            E(X) = ∑ x · P(X = x)
+        </p>
+    </div>
+
+    <div class="content-box">
+        <h3>Example of Discrete Random Variable</h3>
+
+        <p>
+            Let X represent the number of heads obtained when two coins are tossed.
+        </p>
+
+        <ul>
+            <li>X = {0, 1, 2}</li>
+            <li>P(0) = 1/4, P(1) = 1/2, P(2) = 1/4</li>
+        </ul>
+
+        <p>
+            Mean:
+        </p>
+
+        <p style="text-align:center; font-size:18px; font-weight:bold;">
+            E(X) = (0×1/4) + (1×1/2) + (2×1/4) = 1
+        </p>
+    </div>
+
+    <div class="content-box">
+        <h3>Continuous Random Variables</h3>
+
+        <p>
+            A <strong>continuous random variable</strong> can take <strong>any value within a given interval</strong>.
+            The number of possible values is infinite and cannot be listed individually.
+        </p>
+
+        <p><strong>Examples:</strong></p>
+        <ul>
+            <li>Height of students</li>
+            <li>Time taken to complete a task</li>
+            <li>Temperature of a city</li>
+        </ul>
+
+        <p>
+            Continuous random variables are described using a
+            <strong>Probability Density Function (PDF)</strong>.
+        </p>
+
+        <p style="text-align:center; font-size:18px; font-weight:bold;">
+            P(a ≤ X ≤ b) = ∫<sub>a</sub><sup>b</sup> f(x) dx
+        </p>
+
+        <ul>
+            <li>f(x) ≥ 0 for all x</li>
+            <li>∫<sub>-∞</sub><sup>∞</sup> f(x) dx = 1</li>
+        </ul>
+
+        <p>
+            <strong>Mean:</strong>
+        </p>
+
+        <p style="text-align:center; font-size:18px; font-weight:bold;">
+            E(X) = ∫ x f(x) dx
+        </p>
+    </div>
+
+    <div class="content-box">
+        <h3>Example of Continuous Random Variable</h3>
+
+        <p>
+            Let X be uniformly distributed between 0 and 10.
+        </p>
+
+        <p>
+            f(x) = 1/10 , &nbsp; 0 ≤ x ≤ 10
+        </p>
+
+        <p>
+            Mean:
+        </p>
+
+        <p style="text-align:center; font-size:18px; font-weight:bold;">
+            E(X) = ∫<sub>0</sub><sup>10</sup> x(1/10) dx = 5
+        </p>
+    </div>
+
+    <div class="content-box">
+        <h3>Comparison: Discrete vs Continuous Random Variables</h3>
+
+        <ul>
+            <li><strong>Discrete:</strong> Countable values, uses PMF, P(X = x) &gt; 0 possible</li>
+            <li><strong>Continuous:</strong> Infinite values, uses PDF, P(X = x) = 0 always</li>
+            <li><strong>Graphs:</strong> Bar graph (Discrete), Smooth curve (Continuous)</li>
+        </ul>
+    </div>
+
+    <!-- Back button -->
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
