@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Probability Density Function (PDF)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="content-box">
+        <h3>Probability Density Function (PDF)</h3>
+
+        <p>
+            A <strong>Probability Density Function (PDF)</strong> describes the probability
+            distribution of a <strong>continuous random variable</strong>.
+        </p>
+
+        <p>
+            For a continuous random variable <strong>X</strong>, the probability that X lies
+            between two values <strong>a</strong> and <strong>b</strong> is:
+        </p>
+
+        <p style="text-align:center; font-size:18px; font-weight:bold;">
+            P(a ≤ X ≤ b) = ∫<sub>a</sub><sup>b</sup> f(x) dx
+        </p>
+
+        <ul>
+            <li>f(x) ≥ 0 for all x</li>
+            <li>∫<sub>-∞</sub><sup>∞</sup> f(x) dx = 1</li>
+            <li>P(X = x) = 0 for continuous variables</li>
+        </ul>
+    </div>
+
+    <!-- GRAPH SECTION (MATCHES NOTEBOOK SKETCH) -->
+    <div class="content-box">
+        <h3>Graph of Probability Density Function</h3>
+        <canvas id="pdfGraph" width="520" height="320"></canvas>
+    </div>
+
+    <!-- EXAMPLE SECTION -->
+    <div class="content-box">
+        <h3>Example of PDF (Uniform Distribution)</h3>
+
+        <p><strong>Problem:</strong></p>
+        <p>
+            Let <strong>X</strong> be the lifetime (in hours) of a light bulb.
+            Assume X is uniformly distributed between <strong>0 and 10 hours</strong>.
+        </p>
+
+        <p><strong>PDF:</strong></p>
+        <p style="text-align:center; font-size:18px; font-weight:bold;">
+            f(x) = 1/10 , &nbsp; 0 ≤ x ≤ 10
+        </p>
+
+        <p style="text-align:center; font-size:18px; font-weight:bold;">
+            f(x) = 0 , &nbsp; otherwise
+        </p>
+
+        <p><strong>Find:</strong> P(3 ≤ X ≤ 7)</p>
+
+        <p><strong>Solution:</strong></p>
+
+        <p style="text-align:center; font-size:18px;">
+            P(3 ≤ X ≤ 7) = ∫<sub>3</sub><sup>7</sup> 1/10 dx
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            = (1/10) × (7 − 3)
+        </p>
+
+        <p style="text-align:center; font-size:18px; font-weight:bold;">
+            = 0.4
+        </p>
+
+        <p>
+            ✔ Therefore, the probability that the bulb lasts between 3 and 7 hours is <strong>0.4</strong>.
+        </p>
+    </div>
+
+    <div class="content-box">
+        <h3>Uses of PDF</h3>
+
+        <ul>
+            <li>📊 Modeling real-world continuous data</li>
+            <li>🩺 Medical measurements (blood pressure, temperature)</li>
+            <li>⚙ Engineering reliability analysis</li>
+            <li>📈 Signal processing</li>
+            <li>💰 Financial risk analysis</li>
+        </ul>
+    </div>
+
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<!-- GRAPH SCRIPT -->
+<script>
+const canvas = document.getElementById("pdfGraph");
+const ctx = canvas.getContext("2d");
+
+// Axis
+ctx.lineWidth = 2;
+ctx.beginPath();
+ctx.moveTo(60, 20);
+ctx.lineTo(60, 280);   // Y-axis
+ctx.lineTo(500, 280);  // X-axis
+ctx.stroke();
+
+// Labels
+ctx.font = "14px Times New Roman";
+ctx.fillText("f(x)", 20, 30);
+ctx.fillText("x", 495, 295);
+
+// Points and heights (like notebook)
+const xVals = [1, 2, 3, 4, 5];
+const heights = [70, 110, 170, 140, 90];
+
+// Plot dotted verticals and points
+ctx.setLineDash([4, 4]);
+
+xVals.forEach((x, i) => {
+    let xPos = 60 + x * 70;
+    let yPos = 280 - heights[i];
+
+    // Vertical dotted line
+    ctx.beginPath();
+    ctx.moveTo(xPos, 280);
+    ctx.lineTo(xPos, yPos);
+    ctx.stroke();
+
+    // Dot
+    ctx.setLineDash([]);
+    ctx.beginPath();
+    ctx.arc(xPos, yPos, 4, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.setLineDash([4, 4]);
+
+    // xi labels
+    ctx.fillText("x" + x, xPos - 8, 300);
+});
+
+ctx.setLineDash([]);
+</script>
+
+</body>
+</html>
