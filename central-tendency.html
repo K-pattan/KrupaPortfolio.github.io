@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Measures of Central Tendency</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link same CSS used in index -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Theme toggle (optional if already used globally) -->
+<div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+</div>
+
+<div class="container">
+
+    
+
+    <!-- MAIN HEADING -->
+    <div class="content-box">
+        <h3>Measures of Central Tendency</h3>
+        <p>
+            Measures of central tendency are statistical tools used to identify the central or
+            representative value of a dataset. They provide a concise summary of data and are
+            widely used in engineering, data analysis, machine learning, and decision-making.
+        </p>
+    </div>
+
+    <!-- ================= MEAN ================= -->
+    <div class="content-box">
+        <h3>1. Mean</h3>
+
+        <h4>Mean for Discrete Data</h4>
+        <p>
+            The arithmetic mean of a discrete data set is calculated by dividing the sum of all
+            observations by the total number of observations.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center;">
+            x̄ = (Σx) / n
+        </p>
+
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>x = observation</li>
+            <li>n = number of observations</li>
+        </ul>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Data: 10, 20, 30, 40, 50</li>
+            <li>Mean = (10 + 20 + 30 + 40 + 50) / 5 = <strong>30</strong></li>
+        </ul>
+
+        <h4>Mean for Continuous (Grouped) Data</h4>
+        <p>
+            For grouped data, mean is calculated using class midpoints and frequencies.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center;">
+            x̄ = (Σf·x) / Σf
+        </p>
+
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>f = frequency</li>
+            <li>x = class midpoint</li>
+        </ul>
+
+        <p><strong>Engineering Application:</strong></p>
+        <p>
+            Mean is used in signal processing, performance evaluation, and quality control.
+        </p>
+    </div>
+
+    <!-- ================= MEDIAN ================= -->
+    <div class="content-box">
+        <h3>2. Median</h3>
+
+        <h4>Median for Discrete Data</h4>
+        <p>
+            The median is the middle value when data is arranged in ascending or descending order.
+        </p>
+
+        <p><strong>Steps:</strong></p>
+        <ul>
+            <li>Arrange data in order</li>
+            <li>If n is odd → Median = middle value</li>
+            <li>If n is even → Median = average of two middle values</li>
+        </ul>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Data: 15, 20, 25, 30, 35</li>
+            <li>Median = <strong>25</strong></li>
+        </ul>
+
+        <h4>Median for Continuous (Grouped) Data</h4>
+        <p>
+            The median is calculated using the median class and cumulative frequency.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center;">
+            Median = l + [( (N/2) − cf ) / f ] × h
+        </p>
+
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>l = lower boundary of median class</li>
+            <li>N = total frequency</li>
+            <li>cf = cumulative frequency before median class</li>
+            <li>f = frequency of median class</li>
+            <li>h = class width</li>
+        </ul>
+
+        <p>
+            Median is preferred for skewed data such as income, network latency, or response time analysis.
+        </p>
+    </div>
+
+    <!-- ================= MODE ================= -->
+    <div class="content-box">
+        <h3>3. Mode</h3>
+
+        <h4>Mode for Discrete Data</h4>
+        <p>
+            Mode is the value that occurs most frequently in a dataset.
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Data: 2, 4, 4, 6, 8</li>
+            <li>Mode = <strong>4</strong></li>
+        </ul>
+
+        <h4>Mode for Continuous (Grouped) Data</h4>
+        <p>
+            Mode is calculated using the modal class (class with highest frequency).
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center;">
+            Mode = l + [(f₁ − f₀) / (2f₁ − f₀ − f₂)] × h
+        </p>
+
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>l = lower boundary of modal class</li>
+            <li>f₁ = frequency of modal class</li>
+            <li>f₀ = frequency of preceding class</li>
+            <li>f₂ = frequency of succeeding class</li>
+            <li>h = class width</li>
+        </ul>
+
+        <p>
+            Mode is especially useful for categorical data and market demand analysis.
+        </p>
+    </div>
+
+    <!-- ================= COMPARISON ================= -->
+   <div class="content-box">
+    <h3>Comparison of Mean, Median, and Mode</h3>
+
+    <table style="width:100%; border-collapse: collapse; margin-top: 20px;">
+        <thead>
+            <tr style="background: rgba(255,255,255,0.15);">
+                <th style="padding: 14px; border: 1px solid rgba(255,255,255,0.3);">Aspect</th>
+                <th style="padding: 14px; border: 1px solid rgba(255,255,255,0.3);">Mean</th>
+                <th style="padding: 14px; border: 1px solid rgba(255,255,255,0.3);">Median</th>
+                <th style="padding: 14px; border: 1px solid rgba(255,255,255,0.3);">Mode</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Definition
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Arithmetic average of all values
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Middle value of ordered data
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Most frequently occurring value
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Formula
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Σx / n
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Depends on position (N/2)
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Frequency-based
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Sensitivity to Outliers
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Highly sensitive
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Not sensitive
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Not affected
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Suitable for Skewed Data
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    No
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Yes
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Yes
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Applicable to Categorical Data
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    No
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    No
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Yes
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Engineering Applications
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Performance analysis, optimization
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Network latency, income analysis
+                </td>
+                <td style="padding: 12px; border: 1px solid rgba(255,255,255,0.25);">
+                    Demand analysis, classification
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    <!-- BACK LINK -->
+    <a href="index.html" class="back-button">
+    ← Back to Course Overview
+</a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
