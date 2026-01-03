@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skewness and Data Distribution</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Common stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+</div>
+
+<div class="container">
+
+    
+
+    <!-- INTRO -->
+    <div class="content-box">
+        <h3>Skewness and Data Distribution</h3>
+        <p>
+            Skewness describes the degree of asymmetry in a data distribution around its mean.
+            While measures of central tendency and dispersion summarize data numerically,
+            skewness explains the *shape* of the distribution.
+        </p>
+        <p>
+            Understanding skewness is essential in engineering, data science, machine learning,
+            economics, and network performance analysis.
+        </p>
+    </div>
+
+    <!-- DATA DISTRIBUTION -->
+    <div class="content-box">
+        <h3>Data Distribution</h3>
+        <p>
+            A data distribution shows how values are spread across different ranges.
+            It is commonly visualized using histograms or frequency curves.
+        </p>
+
+        <ul>
+            <li><strong>Symmetric distribution:</strong> Mean = Median = Mode</li>
+            <li><strong>Positively skewed distribution:</strong> Mean > Median > Mode</li>
+            <li><strong>Negatively skewed distribution:</strong> Mean < Median < Mode</li>
+        </ul>
+
+        <p>
+            The shape of the distribution affects the choice of statistical methods
+            and interpretation of results.
+        </p>
+    </div>
+
+    <!-- SKEWNESS -->
+    <div class="content-box">
+        <h3>Skewness</h3>
+        <p>
+            Skewness measures the lack of symmetry in a frequency distribution.
+            A perfectly symmetric distribution has zero skewness.
+        </p>
+
+        <ul>
+            <li><strong>Zero Skewness:</strong> Symmetric distribution</li>
+            <li><strong>Positive Skewness:</strong> Tail extends to the right</li>
+            <li><strong>Negative Skewness:</strong> Tail extends to the left</li>
+        </ul>
+        
+        
+        <br>
+    <h3>Graphical Representation of Skewness</h3>
+
+    <p>
+        Graphs help visualize the shape of a data distribution and clearly indicate
+        whether the data is symmetric, positively skewed, or negatively skewed.
+    </p>
+
+    <!-- SYMMETRIC -->
+    <h4 style="text-align:center;">Symmetric Distribution (Sk = 0)</h4>
+    <svg width="100%" height="180" viewBox="0 0 600 180">
+        <path d="M50 150 Q300 20 550 150" 
+              fill="none" stroke="#ffd54f" stroke-width="4"/>
+        <line x1="300" y1="20" x2="300" y2="150"
+              stroke="#4dd0e1" stroke-dasharray="5,5"/>
+        <text x="285" y="170" fill="white">Mean = Median = Mode</text>
+    </svg>
+
+    <!-- POSITIVE SKEW -->
+    <h4 style="text-align:center;">Positively Skewed Distribution (Right Skew)</h4>
+    <svg width="100%" height="180" viewBox="0 0 600 180">
+        <path d="M50 150 Q180 20 300 90 Q450 140 550 150"
+              fill="none" stroke="#ffd54f" stroke-width="4"/>
+        <text x="120" y="170" fill="white">Mode</text>
+        <text x="260" y="170" fill="white">Median</text>
+        <text x="420" y="170" fill="white">Mean</text>
+    </svg>
+
+    <!-- NEGATIVE SKEW -->
+    <h4 style="text-align:center;">Negatively Skewed Distribution (Left Skew)</h4>
+    <svg width="100%" height="180" viewBox="0 0 600 180">
+        <path d="M50 150 Q150 140 300 90 Q420 20 550 150"
+              fill="none" stroke="#ffd54f" stroke-width="4"/>
+        <text x="120" y="170" fill="white">Mean</text>
+        <text x="260" y="170" fill="white">Median</text>
+        <text x="420" y="170" fill="white">Mode</text>
+    </svg>
+
+    <p>
+        From the graphs, it is evident that:
+        <ul>
+            <li>In a symmetric distribution, mean = median = mode</li>
+            <li>In positive skewness, mean &gt; median &gt; mode</li>
+            <li>In negative skewness, mean &lt; median &lt; mode</li>
+        </ul>
+    </p>
+
+
+    </div>
+
+    <!-- KARL PEARSON -->
+    <div class="content-box">
+        <h3>Karl Pearson’s Coefficient of Skewness</h3>
+
+        <p><strong>Formula (when mode is known):</strong></p>
+        <p style="text-align:center;">
+            Sk = (Mean − Mode) / Standard Deviation
+        </p>
+
+        <p><strong>Formula (when mode is not known):</strong></p>
+        <p style="text-align:center;">
+            Sk = 3(Mean − Median) / Standard Deviation
+        </p>
+
+        <h4>Solved Example (Positive Skewness)</h4>
+        <ul>
+            <li>Mean = 60</li>
+            <li>Median = 55</li>
+            <li>Standard Deviation = 10</li>
+        </ul>
+
+        <p><strong>Calculation:</strong></p>
+        <p style="text-align:center;">
+            Sk = 3(60 − 55) / 10 = 15 / 10 = <strong>1.5</strong>
+        </p>
+
+        <p>
+            Since skewness is positive, the distribution is <strong>right-skewed</strong>.
+        </p>
+    </div>
+
+    <!-- BOWLEY -->
+    <div class="content-box">
+        <h3>Bowley’s Coefficient of Skewness</h3>
+        <p>
+            Bowley’s method is used when quartiles are available and is suitable for
+            open-ended distributions.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center;">
+            Sk = (Q₃ + Q₁ − 2Q₂) / (Q₃ − Q₁)
+        </p>
+
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>Q₁ = First quartile</li>
+            <li>Q₂ = Median</li>
+            <li>Q₃ = Third quartile</li>
+        </ul>
+
+        <h4>Solved Example (Negative Skewness)</h4>
+        <ul>
+            <li>Q₁ = 30</li>
+            <li>Q₂ = 40</li>
+            <li>Q₃ = 45</li>
+        </ul>
+
+        <p><strong>Calculation:</strong></p>
+        <p style="text-align:center;">
+            Sk = (45 + 30 − 2×40) / (45 − 30) = (75 − 80) / 15 = <strong>-0.33</strong>
+        </p>
+
+        <p>
+            Negative skewness indicates a <strong>left-skewed distribution</strong>.
+        </p>
+    </div>
+
+    <!-- SYMMETRIC -->
+    <div class="content-box">
+        <h3>Symmetric Distribution Example</h3>
+        <ul>
+            <li>Mean = Median = Mode = 50</li>
+        </ul>
+
+        <p>
+            Since all three measures are equal, skewness is zero and the data is
+            perfectly symmetric.
+        </p>
+    </div>
+
+    <!-- APPLICATIONS -->
+    <div class="content-box">
+        <h3>Engineering and Data Science Applications</h3>
+        <ul>
+            <li>Performance analysis and response time evaluation</li>
+            <li>Income and demand analysis</li>
+            <li>Feature distribution analysis in Machine Learning</li>
+            <li>Network traffic and latency modeling</li>
+        </ul>
+
+        <p>
+            Skewness helps engineers and analysts choose suitable statistical models
+            and make reliable predictions.
+        </p>
+    </div>
+    
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
