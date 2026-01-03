@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mean, Variance and Standard Deviation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ====================== INTRO ====================== -->
+    <div class="content-box">
+        <h3>Mean, Variance and Standard Deviation</h3>
+
+        <p>
+            <strong>Mean</strong>, <strong>Variance</strong>, and <strong>Standard Deviation</strong>
+            are fundamental statistical measures used to describe the
+            <strong>central tendency</strong> and <strong>dispersion</strong>
+            of a random variable.
+        </p>
+
+        <p>
+            These measures are applicable to both
+            <strong>discrete</strong> and <strong>continuous</strong>
+            random variables and play a key role in probability distributions.
+        </p>
+    </div>
+
+    <!-- ====================== DISCRETE RV ====================== -->
+    <div class="content-box">
+        <h3>1. Discrete Random Variable</h3>
+
+        <p>
+            Let <strong>X</strong> be a discrete random variable with probability
+            mass function <strong>P(X = xᵢ)</strong>.
+        </p>
+
+        <h4>Formulas</h4>
+
+        <p><strong>Mean (Expected Value):</strong></p>
+        <p style="text-align:center; font-size:18px;">
+            μ = E(X) = Σ xᵢ P(xᵢ)
+        </p>
+
+        <p><strong>Variance:</strong></p>
+        <p style="text-align:center; font-size:18px;">
+            σ² = Var(X) = Σ (xᵢ − μ)² P(xᵢ)
+        </p>
+
+        <p><strong>Standard Deviation:</strong></p>
+        <p style="text-align:center; font-size:18px;">
+            σ = √σ²
+        </p>
+
+        <h4>Solved Example</h4>
+
+        <p>
+            Given:
+        </p>
+
+        <ul>
+            <li>P(X = 0) = 0.2</li>
+            <li>P(X = 1) = 0.5</li>
+            <li>P(X = 2) = 0.3</li>
+        </ul>
+
+        <p><strong>Mean:</strong></p>
+        <p>
+            μ = (0)(0.2) + (1)(0.5) + (2)(0.3) = 1.1
+        </p>
+
+        <p><strong>E(X²):</strong></p>
+        <p>
+            E(X²) = (0²)(0.2) + (1²)(0.5) + (2²)(0.3) = 1.7
+        </p>
+
+        <p><strong>Variance:</strong></p>
+        <p>
+            σ² = 1.7 − (1.1)² = 0.49
+        </p>
+
+        <p><strong>Standard Deviation:</strong></p>
+        <p>
+            σ = √0.49 = 0.7
+        </p>
+    </div>
+
+    <!-- ====================== CONTINUOUS RV ====================== -->
+    <div class="content-box">
+        <h3>2. Continuous Random Variable</h3>
+
+        <p>
+            Let <strong>X</strong> be a continuous random variable with
+            probability density function <strong>f(x)</strong>.
+        </p>
+
+        <h4>Formulas</h4>
+
+        <p><strong>Mean:</strong></p>
+        <p style="text-align:center; font-size:18px;">
+            μ = ∫ x f(x) dx
+        </p>
+
+        <p><strong>Variance:</strong></p>
+        <p style="text-align:center; font-size:18px;">
+            σ² = ∫ (x − μ)² f(x) dx
+        </p>
+
+        <p><strong>Standard Deviation:</strong></p>
+        <p style="text-align:center; font-size:18px;">
+            σ = √σ²
+        </p>
+
+        <h4>Solved Example (Uniform Distribution)</h4>
+
+        <p>
+            Let X be uniformly distributed over (0, 10).
+        </p>
+
+        <p>
+            f(x) = 1/10 , 0 ≤ x ≤ 10
+        </p>
+
+        <p><strong>Mean:</strong></p>
+        <p>
+            μ = (0 + 10)/2 = 5
+        </p>
+
+        <p><strong>Variance:</strong></p>
+        <p>
+            σ² = (b − a)² / 12 = (10 − 0)² / 12 = 8.33
+        </p>
+
+        <p><strong>Standard Deviation:</strong></p>
+        <p>
+            σ = √8.33 ≈ 2.88
+        </p>
+    </div>
+
+    <!-- ====================== BINOMIAL ====================== -->
+    <div class="content-box">
+        <h3>3. Binomial Distribution</h3>
+
+        <p>
+            A binomial distribution models the number of successes in
+            <strong>n independent trials</strong>, each with probability <strong>p</strong>.
+        </p>
+
+        <h4>Formulas</h4>
+
+        <p>
+            Mean: μ = np
+        </p>
+        <p>
+            Variance: σ² = npq
+        </p>
+        <p>
+            Standard Deviation: σ = √(npq)
+        </p>
+
+        <h4>Solved Example</h4>
+
+        <p>
+            n = 10, p = 0.4
+        </p>
+
+        <p>
+            μ = 10 × 0.4 = 4
+        </p>
+
+        <p>
+            σ² = 10 × 0.4 × 0.6 = 2.4
+        </p>
+
+        <p>
+            σ = √2.4 ≈ 1.55
+        </p>
+    </div>
+
+    <!-- ====================== POISSON ====================== -->
+    <div class="content-box">
+        <h3>4. Poisson Distribution</h3>
+
+        <p>
+            A Poisson distribution models the number of events occurring
+            in a fixed interval when events occur randomly.
+        </p>
+
+        <h4>Formulas</h4>
+
+        <p>
+            Mean: μ = λ
+        </p>
+        <p>
+            Variance: σ² = λ
+        </p>
+        <p>
+            Standard Deviation: σ = √λ
+        </p>
+
+        <h4>Solved Example</h4>
+
+        <p>
+            λ = 3
+        </p>
+
+        <p>
+            μ = 3 , σ² = 3 , σ = √3 ≈ 1.73
+        </p>
+    </div>
+
+    <!-- ====================== NORMAL ====================== -->
+    <div class="content-box">
+        <h3>5. Normal Distribution</h3>
+
+        <p>
+            A normal distribution is a symmetric, bell-shaped distribution
+            defined by mean μ and standard deviation σ.
+        </p>
+
+        <h4>Formulas</h4>
+
+        <p>
+            Mean = μ
+        </p>
+        <p>
+            Variance = σ²
+        </p>
+        <p>
+            Standard Deviation = σ
+        </p>
+
+        <h4>Solved Example</h4>
+
+        <p>
+            If X ~ N(50, 9):
+        </p>
+
+        <p>
+            μ = 50
+        </p>
+
+        <p>
+            σ² = 9
+        </p>
+
+        <p>
+            σ = √9 = 3
+        </p>
+    </div>
+
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
