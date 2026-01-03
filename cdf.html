@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cumulative Distribution Function (CDF)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 🔹 INTRODUCTION -->
+    <div class="content-box">
+        <h3>Cumulative Distribution Function (CDF)</h3>
+
+        <p>
+            The <strong>Cumulative Distribution Function (CDF)</strong> of a random variable
+            <strong>X</strong> gives the probability that <strong>X</strong> takes a value
+            less than or equal to a given number.
+        </p>
+
+        <p>
+            It is denoted by <strong>F(x)</strong> and is defined for both
+            <strong>discrete</strong> and <strong>continuous</strong> random variables.
+        </p>
+    </div>
+
+    <!-- 🔹 DEFINITION -->
+    <div class="content-box">
+        <h3>Mathematical Definition</h3>
+
+        <p style="text-align:center; font-size:18px; font-weight:bold;">
+            F(x) = P(X ≤ x)
+        </p>
+
+        <h4>For Discrete Random Variable</h4>
+        <p style="text-align:center; font-size:17px;">
+            F(x) = Σ P(X = xᵢ) , &nbsp; for all xᵢ ≤ x
+        </p>
+
+        <h4>For Continuous Random Variable</h4>
+        <p style="text-align:center; font-size:17px;">
+            F(x) = ∫<sub>-∞</sub><sup>x</sup> f(t) dt
+        </p>
+    </div>
+
+    <!-- 🔹 PROPERTIES -->
+    <div class="content-box">
+        <h3>Properties of CDF</h3>
+
+        <ul>
+            <li>0 ≤ F(x) ≤ 1</li>
+            <li>F(x) is a non-decreasing function</li>
+            <li>lim<sub>x→−∞</sub> F(x) = 0</li>
+            <li>lim<sub>x→∞</sub> F(x) = 1</li>
+            <li>CDF is continuous from the right</li>
+        </ul>
+    </div>
+
+    <!-- 🔹 GRAPH -->
+    <div class="content-box">
+        <h3>Graph of Cumulative Distribution Function</h3>
+        <p>
+            For a discrete random variable, the CDF is a <strong>step-wise increasing graph</strong>,
+            exactly like the hand-drawn diagram.
+        </p>
+
+        <canvas id="cdfGraph" width="550" height="320"></canvas>
+    </div>
+
+    <!-- 🔹 SOLVED EXAMPLE -->
+    <div class="content-box">
+        <h3>Solved Example (Discrete CDF)</h3>
+
+        <p><strong>Problem:</strong></p>
+        <p>
+            A random variable <strong>X</strong> takes the following values:
+        </p>
+
+        <ul>
+            <li>P(X = 1) = 0.1</li>
+            <li>P(X = 2) = 0.2</li>
+            <li>P(X = 3) = 0.3</li>
+            <li>P(X = 4) = 0.25</li>
+            <li>P(X = 5) = 0.15</li>
+        </ul>
+
+        <p><strong>Find:</strong> The cumulative distribution function F(x).</p>
+
+        <p><strong>Solution:</strong></p>
+
+        <ul>
+            <li>F(1) = 0.1</li>
+            <li>F(2) = 0.1 + 0.2 = 0.3</li>
+            <li>F(3) = 0.6</li>
+            <li>F(4) = 0.85</li>
+            <li>F(5) = 1.0</li>
+        </ul>
+
+        <p>
+            ✔ These cumulative probabilities produce the staircase CDF graph shown above.
+        </p>
+    </div>
+
+    <!-- 🔹 APPLICATIONS -->
+    <div class="content-box">
+        <h3>Applications of CDF</h3>
+
+        <ul>
+            <li>📊 Finding probabilities over intervals</li>
+            <li>📈 Statistical inference</li>
+            <li>🧠 Machine learning models</li>
+            <li>⚙ Reliability and life-testing analysis</li>
+            <li>💰 Risk and finance modeling</li>
+        </ul>
+    </div>
+
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<!-- 🔹 CDF GRAPH SCRIPT -->
+<script>
+const canvas = document.getElementById("cdfGraph");
+const ctx = canvas.getContext("2d");
+
+// Axes
+ctx.beginPath();
+ctx.moveTo(50, 20);
+ctx.lineTo(50, 280);
+ctx.lineTo(500, 280);
+ctx.strokeStyle = "white";
+ctx.lineWidth = 2;
+ctx.stroke();
+
+// Labels
+ctx.fillStyle = "white";
+ctx.font = "14px Times New Roman";
+ctx.fillText("F(x)", 15, 25);
+ctx.fillText("x", 495, 295);
+
+// Data points (same as example)
+const xVals = [1, 2, 3, 4, 5];
+const yVals = [0.1, 0.3, 0.6, 0.85, 1.0];
+
+const scaleX = 80;
+const scaleY = 240;
+
+let prevX = 50;
+let prevY = 280;
+
+// Draw step graph
+ctx.beginPath();
+for (let i = 0; i < xVals.length; i++) {
+    let x = 50 + xVals[i] * scaleX;
+    let y = 280 - yVals[i] * scaleY;
+
+    ctx.lineTo(x, prevY);
+    ctx.lineTo(x, y);
+
+    // Filled dot
+    ctx.fillRect(x - 3, y - 3, 6, 6);
+
+    prevY = y;
+}
+ctx.strokeStyle = "#ffd54f";
+ctx.lineWidth = 2;
+ctx.stroke();
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
