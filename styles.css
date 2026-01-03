@@ -340,6 +340,7 @@ body.light .lab h4 {
 
 /* Content boxes for topic pages */
 .content-box {
+    font-family: "Times New Roman", Times, serif;
     width: 850px;
     background: rgba(255,255,255,0.1);
     padding: 30px;
@@ -377,6 +378,73 @@ body.light .content-box h3 {
 
 body.light .content-box h4 {
     color: #00796b;
+}
+
+/* Center the container itself */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Force all content boxes to center */
+.card,
+.intro,
+.foundation,
+.overview,
+.content-box {
+    width: 850px;
+    max-width: 90%;
+    margin: 25px auto;
+}
+
+/* Text alignment stays left inside boxes */
+.card *,
+.intro *,
+.foundation *,
+.overview *,
+.content-box * {
+    text-align: left;
+}
+
+/* Keep headings centered */
+.card h1,
+.card h2,
+.intro h3,
+.foundation h3,
+.overview h3 {
+    text-align: center;
+}
+
+.back-button {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+}
+
+/* Center the button */
+.back-button {
+    display: block;
+    width: fit-content;
+}
+
+/* Hover effect */
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(-4px);
 }
 
 
