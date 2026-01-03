@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Addition and Multiplication Rules of Probability</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Common stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Simple diagram styling */
+        .diagram {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 20px 0;
+        }
+
+        .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #ffd54f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .overlap {
+            position: relative;
+        }
+
+        .overlap::after {
+            content: "A ∩ B";
+            position: absolute;
+            top: 35%;
+            left: 35%;
+            font-size: 14px;
+            color: #ffcc70;
+        }
+
+        .formula {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+</div>
+
+<div class="container">
+
+    
+
+    <!-- INTRODUCTION -->
+    <div class="content-box">
+        <h3>Addition and Multiplication Rules of Probability</h3>
+        <p>
+            In probability theory, the addition and multiplication rules are fundamental
+            principles used to calculate the probability of combined events.
+            These rules are widely applied in engineering, data science, communication systems,
+            and risk analysis.
+        </p>
+    </div>
+
+    <!-- ADDITION RULE -->
+    <div class="content-box">
+        <h3>Addition Rule of Probability</h3>
+        <p>
+            The addition rule is used to find the probability that <strong>at least one</strong>
+            of two events occurs.
+        </p>
+
+        <h4>1. For Mutually Exclusive Events</h4>
+        <p class="formula">
+            P(A ∪ B) = P(A) + P(B)
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Experiment: Tossing a coin</li>
+            <li>Event A: Head → P(A) = 1/2</li>
+            <li>Event B: Tail → P(B) = 1/2</li>
+            <li>P(A ∪ B) = 1/2 + 1/2 = <strong>1</strong></li>
+        </ul>
+
+       
+    </div>
+
+    <!-- ADDITION RULE (NON-MUTUALLY EXCLUSIVE) -->
+    <div class="content-box">
+        <h3>Addition Rule for Non-Mutually Exclusive Events</h3>
+        <p>
+            When two events can occur simultaneously, their common probability must
+            be subtracted to avoid double counting.
+        </p>
+
+        <p class="formula">
+            P(A ∪ B) = P(A) + P(B) − P(A ∩ B)
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>From a deck of cards:</li>
+            <li>Event A: Card is a King → P(A) = 4/52</li>
+            <li>Event B: Card is a Heart → P(B) = 13/52</li>
+            <li>Event A ∩ B: King of Hearts → P = 1/52</li>
+        </ul>
+
+        <p class="formula">
+            P(A ∪ B) = (4 + 13 − 1) / 52 = <strong>16 / 52</strong>
+        </p>
+
+       
+    </div>
+
+    <!-- MULTIPLICATION RULE -->
+    <div class="content-box">
+        <h3>Multiplication Rule of Probability</h3>
+        <p>
+            The multiplication rule is used to find the probability that
+            <strong>two events occur together</strong>.
+        </p>
+
+        <h4>1. For Independent Events</h4>
+        <p class="formula">
+            P(A ∩ B) = P(A) × P(B)
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Experiment: Tossing a coin and rolling a die</li>
+            <li>P(Head) = 1/2</li>
+            <li>P(Number 6) = 1/6</li>
+        </ul>
+
+        <p class="formula">
+            P(A ∩ B) = (1/2) × (1/6) = <strong>1/12</strong>
+        </p>
+    </div>
+
+    <!-- MULTIPLICATION RULE (DEPENDENT) -->
+    <div class="content-box">
+        <h3>Multiplication Rule for Dependent Events</h3>
+        <p>
+            When events are dependent, the probability of the second event
+            depends on the occurrence of the first event.
+        </p>
+
+        <p class="formula">
+            P(A ∩ B) = P(A) × P(B | A)
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <ul>
+            <li>Drawing two cards without replacement</li>
+            <li>Event A: First card is an Ace → P(A) = 4/52</li>
+            <li>Event B: Second card is an Ace given first is Ace → P(B|A) = 3/51</li>
+        </ul>
+
+        <p class="formula">
+            P(A ∩ B) = (4/52) × (3/51) = <strong>12 / 2652</strong>
+        </p>
+    </div>
+
+    <!-- APPLICATIONS -->
+    <div class="content-box">
+        <h3>Applications of Addition and Multiplication Rules</h3>
+        <ul>
+            <li>Reliability analysis in engineering systems</li>
+            <li>Network failure and communication models</li>
+            <li>Machine learning and Bayesian inference</li>
+            <li>Risk assessment and decision making</li>
+            <li>Quality control and statistical testing</li>
+        </ul>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="content-box">
+        <h3>Conclusion</h3>
+        <p>
+            The addition and multiplication rules form the backbone of probability theory.
+            Correct identification of event relationships ensures accurate modeling of
+            uncertain systems in engineering and data-driven applications.
+        </p>
+    </div>
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
