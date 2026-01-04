@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confidence Intervals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  
+<div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+</div>
+
+
+<div class="container">
+
+    <!-- ================= INTRO ================= -->
+    <div class="content-box">
+        <h3>Confidence Intervals</h3>
+
+        <p>
+            A <strong>confidence interval</strong> is a range of values used to
+            estimate an unknown population parameter such as mean or proportion.
+        </p>
+
+        <p>
+            It provides an interval within which the true population parameter
+            is expected to lie with a specified level of confidence.
+        </p>
+
+        <p>
+            Common confidence levels are <strong>90%</strong>, <strong>95%</strong>,
+            and <strong>99%</strong>.
+        </p>
+    </div>
+
+    <!-- ================= KEY TERMS ================= -->
+    <div class="content-box">
+        <h3>Important Terms</h3>
+
+        <ul>
+            <li><strong>Point Estimate:</strong> Sample statistic (mean or proportion)</li>
+            <li><strong>Confidence Level:</strong> Probability that the interval contains the true parameter</li>
+            <li><strong>Margin of Error:</strong> Maximum possible error in estimation</li>
+            <li><strong>Critical Value:</strong> z or t value based on confidence level</li>
+        </ul>
+    </div>
+
+    <!-- ================= FORMULA ================= -->
+    <div class="content-box">
+        <h3>General Formula</h3>
+
+        <p style="text-align:center; font-size:18px;">
+            Confidence Interval = Point Estimate ± Margin of Error
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            Margin of Error = Critical Value × Standard Error
+        </p>
+    </div>
+
+    <!-- ================= MEAN (KNOWN SIGMA) ================= -->
+    <div class="content-box">
+        <h3>Confidence Interval for Mean (σ Known)</h3>
+
+        <p>
+            When the population standard deviation (σ) is known and the sample
+            size is large (n ≥ 30), the <strong>z-distribution</strong> is used.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+
+        <p style="text-align:center; font-size:18px;">
+            x̄ ± z<sub>α/2</sub> (σ / √n)
+        </p>
+
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>x̄ = sample mean</li>
+            <li>σ = population standard deviation</li>
+            <li>n = sample size</li>
+            <li>z<sub>α/2</sub> = z-value for given confidence level</li>
+        </ul>
+    </div>
+
+    <!-- ================= EXAMPLE 1 ================= -->
+    <div class="content-box">
+        <h3>Example 1: Confidence Interval for Mean</h3>
+
+        <p><strong>Given:</strong></p>
+        <ul>
+            <li>Sample mean (x̄) = 50</li>
+            <li>Population standard deviation (σ) = 10</li>
+            <li>Sample size (n) = 100</li>
+            <li>Confidence level = 95%</li>
+        </ul>
+
+        <p><strong>Solution:</strong></p>
+
+        <p>
+            For 95% confidence level,
+            z<sub>α/2</sub> = 1.96
+        </p>
+
+        <p>
+            Standard Error = σ / √n = 10 / √100 = 1
+        </p>
+
+        <p>
+            Margin of Error = 1.96 × 1 = 1.96
+        </p>
+
+        <p>
+            Confidence Interval = 50 ± 1.96
+        </p>
+
+        <p><strong>Answer:</strong></p>
+        <p>
+            (48.04 , 51.96)
+        </p>
+    </div>
+
+    <!-- ================= MEAN (UNKNOWN SIGMA) ================= -->
+    <div class="content-box">
+        <h3>Confidence Interval for Mean (σ Unknown)</h3>
+
+        <p>
+            When population standard deviation is unknown and sample size is
+            small (n &lt; 30), the <strong>t-distribution</strong> is used.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+
+        <p style="text-align:center; font-size:18px;">
+            x̄ ± t<sub>α/2</sub> (s / √n)
+        </p>
+
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>s = sample standard deviation</li>
+            <li>t<sub>α/2</sub> = t-value with (n − 1) degrees of freedom</li>
+        </ul>
+    </div>
+
+    <!-- ================= PROPORTION ================= -->
+    <div class="content-box">
+        <h3>Confidence Interval for Population Proportion</h3>
+
+        <p>
+            This method is used to estimate the population proportion.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+
+        <p style="text-align:center; font-size:18px;">
+            p̂ ± z<sub>α/2</sub> √[ (p̂q̂) / n ]
+        </p>
+
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>p̂ = sample proportion</li>
+            <li>q̂ = 1 − p̂</li>
+            <li>n = sample size</li>
+        </ul>
+    </div>
+
+    <!-- ================= EXAMPLE 2 ================= -->
+    <div class="content-box">
+        <h3>Example 2: Confidence Interval for Proportion</h3>
+
+        <p><strong>Given:</strong></p>
+        <ul>
+            <li>Sample size (n) = 200</li>
+            <li>Number of successes = 80</li>
+            <li>Confidence level = 95%</li>
+        </ul>
+
+        <p><strong>Solution:</strong></p>
+
+        <p>
+            p̂ = 80 / 200 = 0.4
+        </p>
+
+        <p>
+            q̂ = 1 − 0.4 = 0.6
+        </p>
+
+        <p>
+            Standard Error = √[(0.4 × 0.6) / 200] = 0.0346
+        </p>
+
+        <p>
+            Margin of Error = 1.96 × 0.0346 = 0.0678
+        </p>
+
+        <p>
+            Confidence Interval = 0.4 ± 0.0678
+        </p>
+
+        <p><strong>Answer:</strong></p>
+        <p>
+            (0.332 , 0.468)
+        </p>
+    </div>
+
+    <!-- ================= CONCLUSION ================= -->
+    <div class="content-box">
+        <h3>Conclusion</h3>
+
+        <p>
+            Confidence intervals provide a reliable range for estimating unknown
+            population parameters and are widely used in statistics, research,
+            and data analysis.
+        </p>
+    </div>
+
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
