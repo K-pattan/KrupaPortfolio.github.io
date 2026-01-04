@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tests for Mean and Proportion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span></div>
+
+<div class="container">
+
+<!-- ===================================================== -->
+<div class="content-box">
+    <h3>Tests for Mean and Proportion</h3>
+
+    <p>
+        Statistical tests for <strong>means</strong> and <strong>proportions</strong>
+        are used to make decisions about population parameters based on sample data.
+        These tests help determine whether observed differences are
+        <strong>statistically significant</strong> or due to random variation.
+    </p>
+</div>
+
+<!-- ===================================================== -->
+<div class="content-box">
+    <h3>1. Test for Mean – Single Population</h3>
+
+    <h4>When Standard Deviation is Known (Z-test)</h4>
+
+    <p><strong>When to use:</strong></p>
+    <ul>
+        <li>Population standard deviation (σ) is known</li>
+        <li>Sample size n ≥ 30 or population is normal</li>
+    </ul>
+
+    <p><strong>Hypotheses:</strong></p>
+    <p>
+        H₀ : μ = μ₀ <br>
+        H₁ : μ ≠ μ₀
+    </p>
+
+    <p><strong>Test Statistic:</strong></p>
+    <p style="text-align:center;">
+        Z = (x̄ − μ₀) / (σ / √n)
+    </p>
+
+    <h4>Solved Example</h4>
+    <p>
+        A sample of 36 items has mean 50. Population SD is 6.
+        Test whether the population mean is 52 at 5% level.
+    </p>
+
+    <p>
+        Z = (50 − 52) / (6 / √36) = −2
+    </p>
+
+    <p>
+        |Z| = 2 > 1.96 → Reject H₀
+    </p>
+
+    <p><strong>Conclusion:</strong> Mean differs significantly.</p>
+</div>
+
+<!-- ===================================================== -->
+<div class="content-box">
+    <h3>2. Test for Mean – Single Population (SD Unknown)</h3>
+
+    <h4>t-test</h4>
+
+    <p><strong>When to use:</strong></p>
+    <ul>
+        <li>Population SD unknown</li>
+        <li>Sample size n < 30</li>
+        <li>Population approximately normal</li>
+    </ul>
+
+    <p><strong>Test Statistic:</strong></p>
+    <p style="text-align:center;">
+        t = (x̄ − μ₀) / (s / √n)
+    </p>
+
+    <h4>Solved Example</h4>
+    <p>
+        Sample mean = 48, SD = 5, n = 16.
+        Test μ = 50 at 5% level.
+    </p>
+
+    <p>
+        t = (48 − 50) / (5 / 4) = −1.6
+    </p>
+
+    <p>
+        t<sub>0.025,15</sub> = 2.131 → Accept H₀
+    </p>
+
+    <p><strong>Conclusion:</strong> No significant difference.</p>
+</div>
+
+<!-- ===================================================== -->
+<div class="content-box">
+    <h3>3. Test for Difference of Two Means (SD Known)</h3>
+
+    <p><strong>When to use:</strong></p>
+    <ul>
+        <li>Two independent samples</li>
+        <li>Population SDs known</li>
+        <li>Large samples</li>
+    </ul>
+
+    <p><strong>Test Statistic:</strong></p>
+    <p style="text-align:center;">
+        Z = (x̄₁ − x̄₂) / √(σ₁²/n₁ + σ₂²/n₂)
+    </p>
+
+    <h4>Solved Example</h4>
+    <p>
+        x̄₁ = 60, σ₁ = 8, n₁ = 50 <br>
+        x̄₂ = 56, σ₂ = 6, n₂ = 40
+    </p>
+
+    <p>
+        Z = (60 − 56) / √(64/50 + 36/40) = 2.43
+    </p>
+
+    <p>
+        |Z| > 1.96 → Reject H₀
+    </p>
+
+    <p><strong>Conclusion:</strong> Means differ significantly.</p>
+</div>
+
+<!-- ===================================================== -->
+<div class="content-box">
+    <h3>4. Test for Difference of Two Means (SD Unknown)</h3>
+
+    <h4>Pooled t-test</h4>
+
+    <p><strong>When to use:</strong></p>
+    <ul>
+        <li>SDs unknown but assumed equal</li>
+        <li>Small samples</li>
+    </ul>
+
+    <p><strong>Pooled Variance:</strong></p>
+    <p style="text-align:center;">
+        s<sub>p</sub>² = [(n₁−1)s₁² + (n₂−1)s₂²] / (n₁ + n₂ − 2)
+    </p>
+
+    <p><strong>Test Statistic:</strong></p>
+    <p style="text-align:center;">
+        t = (x̄₁ − x̄₂) / [s<sub>p</sub> √(1/n₁ + 1/n₂)]
+    </p>
+
+    <h4>Solved Example</h4>
+    <p>
+        x̄₁ = 75, s₁ = 4, n₁ = 10 <br>
+        x̄₂ = 72, s₂ = 5, n₂ = 12
+    </p>
+
+    <p>
+        t = 1.65 (calculated)
+    </p>
+
+    <p>
+        t<sub>0.025,20</sub> = 2.086 → Accept H₀
+    </p>
+</div>
+
+<!-- ===================================================== -->
+<div class="content-box">
+    <h3>5. Test for Proportion – Single Population</h3>
+
+    <p><strong>When to use:</strong></p>
+    <ul>
+        <li>Large sample size</li>
+        <li>np ≥ 5 and nq ≥ 5</li>
+    </ul>
+
+    <p><strong>Test Statistic:</strong></p>
+    <p style="text-align:center;">
+        Z = (p̂ − p₀) / √(p₀q₀ / n)
+    </p>
+
+    <h4>Solved Example</h4>
+    <p>
+        In a sample of 400 items, 80 are defective.
+        Test whether defect rate is 15%.
+    </p>
+
+    <p>
+        p̂ = 0.2
+    </p>
+
+    <p>
+        Z = (0.2 − 0.15) / √(0.15×0.85/400) = 2.58
+    </p>
+
+    <p>
+        Reject H₀
+    </p>
+</div>
+
+<!-- ===================================================== -->
+<div class="content-box">
+    <h3>6. Test for Difference of Two Proportions</h3>
+
+    <p><strong>When to use:</strong></p>
+    <ul>
+        <li>Two large independent samples</li>
+        <li>Comparing population proportions</li>
+    </ul>
+
+    <p><strong>Pooled Proportion:</strong></p>
+    <p style="text-align:center;">
+        p = (x₁ + x₂) / (n₁ + n₂)
+    </p>
+
+    <p><strong>Test Statistic:</strong></p>
+    <p style="text-align:center;">
+        Z = (p₁ − p₂) / √[pq(1/n₁ + 1/n₂)]
+    </p>
+
+    <h4>Solved Example</h4>
+    <p>
+        Sample 1: 60/200 success <br>
+        Sample 2: 40/150 success
+    </p>
+
+    <p>
+        Z = 1.72 < 1.96 → Accept H₀
+    </p>
+
+    <p><strong>Conclusion:</strong> No significant difference.</p>
+</div>
+
+<a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
