@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Probability Sampling Methods</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+</div>
+
+
+
+<div class="container">
+
+    <!-- ====================== INTRO ====================== -->
+    <div class="content-box">
+        <h3>Probability Sampling Methods</h3>
+
+        <p>
+            <strong>Probability sampling</strong> is a method of sampling in which
+            every unit of the population has a <strong>known and non-zero
+            probability</strong> of being selected.
+        </p>
+
+        <p>
+            These methods are widely used in statistics because they produce
+            <strong>unbiased and reliable results</strong>.
+        </p>
+    </div>
+<br>
+    <!-- ====================== TYPES ====================== -->
+    <div class="content-box">
+        <h3>Types of Probability Sampling</h3>
+
+        <ul>
+            <li>Simple Random Sampling</li>
+            <li>Systematic Sampling</li>
+            <li>Stratified Sampling</li>
+            <li>Cluster Sampling</li>
+        </ul>
+    </div>
+<br>
+    <!-- ====================== SIMPLE RANDOM ====================== -->
+    <div class="content-box">
+        <h3>1. Simple Random Sampling</h3>
+
+        <p>
+            In <strong>Simple Random Sampling</strong>, every unit of the population
+            has an equal chance of being selected.
+        </p>
+
+        <p>
+            Selection is done using lottery method, random numbers, or computer-
+            generated random values.
+        </p>
+        <br>
+
+        <h4>Types of Simple Random Sampling</h4>
+<br>
+        <!-- With Replacement -->
+        <h4>1.1 Sampling With Replacement</h4>
+
+        <p>
+            In this method, once a unit is selected, it is
+            <strong>returned to the population</strong> before the next draw.
+            Therefore, the same unit can be selected more than once.
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <p>
+            Suppose there are 5 balls numbered 1 to 5 in a bag.
+            A ball is selected, its number is noted, and then it is put back.
+            This process is repeated.
+        </p>
+
+        <p>
+            The same ball may appear again in future selections.
+        </p>
+
+        <p><strong>Application:</strong></p>
+        <ul>
+            <li>Theoretical probability experiments</li>
+            <li>Simulation studies</li>
+        </ul>
+<br>
+        <!-- Without Replacement -->
+        <h4>1.2 Sampling Without Replacement</h4>
+
+        <p>
+            In this method, once a unit is selected, it is
+            <strong>not returned to the population</strong>.
+            Hence, the same unit cannot be selected again.
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <p>
+            From a class of 30 students, 5 students are selected randomly.
+            Once a student is selected, their name is removed from the list.
+        </p>
+
+        <p>
+            No student can be selected more than once.
+        </p>
+
+        <p><strong>Application:</strong></p>
+        <ul>
+            <li>Survey sampling</li>
+            <li>Quality inspection</li>
+        </ul>
+    </div>
+
+    <!-- ====================== SYSTEMATIC ====================== -->
+    <div class="content-box">
+        <h3>2. Systematic Sampling</h3>
+
+        <p>
+            In systematic sampling, every <strong>k<sup>th</sup></strong> unit
+            is selected after choosing a random starting point.
+        </p>
+
+        <p><strong>Formula:</strong></p>
+        <p style="text-align:center; font-size:18px;">
+            k = N / n
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <p>
+            If a population has 1000 units and a sample of 100 is required,
+            then k = 10. Every 10th unit is selected.
+        </p>
+    </div>
+
+    <!-- ====================== STRATIFIED ====================== -->
+    <div class="content-box">
+        <h3>3. Stratified Sampling</h3>
+
+        <p>
+            In stratified sampling, the population is divided into
+            homogeneous groups called <strong>strata</strong>.
+            Random samples are then taken from each stratum.
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <p>
+            A college population is divided into departments such as CSE,
+            ECE, and ME. Samples are selected separately from each department.
+        </p>
+    </div>
+
+    <!-- ====================== CLUSTER ====================== -->
+    <div class="content-box">
+        <h3>4. Cluster Sampling</h3>
+
+        <p>
+            In cluster sampling, the population is divided into clusters,
+            and a few clusters are randomly selected.
+            All units within the selected clusters are studied.
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <p>
+            A city is divided into zones. A few zones are selected randomly,
+            and all houses in those zones are surveyed.
+        </p>
+    </div>
+
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
