@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hypothesis Testing Using Real Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  
+   <div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span></div>
+
+<div class="container">
+
+    <!-- ====================== INTRO ====================== -->
+    <div class="content-box">
+        <h3>Hypothesis Testing Using Real Data Sets</h3>
+
+        <p>
+            <strong>Hypothesis testing</strong> is a statistical method used to make
+            decisions about a population parameter based on sample information.
+            In real-world applications, data collected from industries, experiments,
+            or surveys is used to verify claims.
+        </p>
+
+        <p>
+            In this example, we apply a <strong>Z-test for mean</strong> using
+            real production data from a manufacturing company.
+        </p>
+    </div>
+
+    <!-- ====================== PROBLEM STATEMENT ====================== -->
+    <div class="content-box">
+        <h3>Problem Statement (LP-16)</h3>
+
+        <p>
+            The mean lifetime of <strong>100 electric bulbs</strong> produced by a
+            manufacturing company is estimated to be
+            <strong>1570 hours</strong> with a
+            <strong>standard deviation of 120 hours</strong>.
+        </p>
+
+        <p>
+            Test the hypothesis that the mean lifetime of bulbs produced by the
+            company is <strong>1600 hours</strong> at the
+            <strong>5% level of significance</strong>.
+        </p>
+    </div>
+
+    <!-- ====================== GIVEN DATA ====================== -->
+    <div class="content-box">
+        <h3>Given Data</h3>
+
+        <ul>
+            <li>Sample mean (x̄) = 1570 hours</li>
+            <li>Population mean (μ₀) = 1600 hours</li>
+            <li>Standard deviation (σ) = 120 hours</li>
+            <li>Sample size (n) = 100</li>
+            <li>Level of significance (α) = 0.05</li>
+        </ul>
+    </div>
+
+    <!-- ====================== HYPOTHESES ====================== -->
+    <div class="content-box">
+        <h3>Step 1: Formulation of Hypotheses</h3>
+
+        <p><strong>Null Hypothesis (H₀):</strong></p>
+        <p style="text-align:center; font-size:18px;">
+            H₀ : μ = 1600 hours
+        </p>
+
+        <p><strong>Alternative Hypothesis (H₁):</strong></p>
+        <p style="text-align:center; font-size:18px;">
+            H₁ : μ ≠ 1600 hours
+        </p>
+
+        <p>
+            This is a <strong>two-tailed test</strong>.
+        </p>
+    </div>
+
+    <!-- ====================== TEST STATISTIC ====================== -->
+    <div class="content-box">
+        <h3>Step 2: Test Statistic</h3>
+
+        <p>
+            Since the sample size is large (n ≥ 30) and the population
+            standard deviation is known, we use a <strong>Z-test</strong>.
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            Z = ( x̄ − μ₀ ) / ( σ / √n )
+        </p>
+
+        <p><strong>Substituting values:</strong></p>
+
+        <p style="text-align:center;">
+            Z = (1570 − 1600) / (120 / √100)
+        </p>
+
+        <p style="text-align:center;">
+            Z = −30 / 12
+        </p>
+
+        <p style="text-align:center; font-weight:bold;">
+            Z = −2.5
+        </p>
+    </div>
+
+    <!-- ====================== P-VALUE ====================== -->
+    <div class="content-box">
+        <h3>Step 3: p-Value Approach</h3>
+
+        <p>
+            The p-value corresponding to the calculated Z-value is:
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            p-value = 0.0124
+        </p>
+
+        <p>
+            This p-value is obtained using the standard normal distribution.
+        </p>
+    </div>
+
+    <!-- ====================== DECISION ====================== -->
+    <div class="content-box">
+        <h3>Step 4: Decision Rule</h3>
+
+        <p>
+            At α = 0.05:
+        </p>
+
+        <ul>
+            <li>If p-value < α → Reject H₀</li>
+            <li>If p-value ≥ α → Fail to reject H₀</li>
+        </ul>
+
+        <p>
+            Since:
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            0.0124 < 0.05
+        </p>
+
+        <p style="font-weight:bold; text-align:center;">
+            Reject the null hypothesis.
+        </p>
+    </div>
+
+    <!-- ====================== CONCLUSION ====================== -->
+    <div class="content-box">
+        <h3>Conclusion</h3>
+
+        <p>
+            There is sufficient statistical evidence at the 5% level of
+            significance to conclude that the mean lifetime of the electric
+            bulbs produced by the company is
+            <strong>significantly different from 1600 hours</strong>.
+        </p>
+    </div>
+
+    <!-- ====================== PYTHON CODE ====================== -->
+    <div class="content-box">
+        <h3>Python Code Used for Computation</h3>
+
+<pre style="background:rgba(0,0,0,0.6); padding:15px; border-radius:10px; overflow-x:auto;">
+import numpy as np
+from scipy.stats import norm
+
+s_mean = 1570
+p_mean = 1600
+std = 120
+s_size = 100
+
+z = (s_mean - p_mean) / (std / np.sqrt(s_size))
+p_value = 2 * (1 - norm.cdf(abs(z)))
+
+print("Z-statistic:", round(z, 3))
+print("p-value:", round(p_value, 4))
+</pre>
+    </div>
+
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
