@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Size Determination</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span>
+</div>
+
+    <!-- ================= INTRODUCTION ================= -->
+    <div class="content-box">
+        <h3>Sample Size Determination</h3>
+
+        <p>
+            <strong>Sample size determination</strong> is the process of selecting
+            an appropriate number of observations or subjects from a population
+            to ensure reliable and accurate statistical results.
+        </p>
+
+        <p>
+            Choosing the correct sample size is essential because:
+        </p>
+
+        <ul>
+            <li>Too small a sample gives unreliable results</li>
+            <li>Too large a sample increases cost and time</li>
+            <li>Correct sample size balances accuracy and efficiency</li>
+        </ul>
+    </div>
+
+    <!-- ================= FACTORS ================= -->
+    <div class="content-box">
+        <h3>Factors Affecting Sample Size</h3>
+
+        <ul>
+            <li><strong>Confidence Level:</strong> Higher confidence → larger sample</li>
+            <li><strong>Margin of Error:</strong> Smaller error → larger sample</li>
+            <li><strong>Population Variability:</strong> More variability → larger sample</li>
+            <li><strong>Population Size:</strong> Important for small populations</li>
+        </ul>
+    </div>
+
+    <!-- ================= SAMPLE SIZE FOR MEAN ================= -->
+    <div class="content-box">
+        <h3>Sample Size for Estimating Mean</h3>
+
+        <p>
+            When estimating a population mean with known standard deviation,
+            the sample size is calculated using the following formula:
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            n = ( z<sub>α/2</sub> · σ / E )²
+        </p>
+
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>n = required sample size</li>
+            <li>z<sub>α/2</sub> = critical value for confidence level</li>
+            <li>σ = population standard deviation</li>
+            <li>E = allowable error (margin of error)</li>
+        </ul>
+    </div>
+
+    <!-- ================= EXAMPLE 1 ================= -->
+    <div class="content-box">
+        <h3>Example 1: Sample Size for Mean</h3>
+
+        <p><strong>Given:</strong></p>
+        <ul>
+            <li>Population standard deviation (σ) = 10</li>
+            <li>Margin of error (E) = 2</li>
+            <li>Confidence level = 95%</li>
+        </ul>
+
+        <p><strong>Solution:</strong></p>
+
+        <p>
+            For 95% confidence level, z<sub>α/2</sub> = 1.96
+        </p>
+
+        <p>
+            n = (1.96 × 10 / 2)²
+        </p>
+
+        <p>
+            n = (9.8)² = 96.04
+        </p>
+
+        <p><strong>Required Sample Size:</strong></p>
+        <p>
+            n ≈ <strong>97</strong> (rounded up)
+        </p>
+    </div>
+
+    <!-- ================= SAMPLE SIZE FOR PROPORTION ================= -->
+    <div class="content-box">
+        <h3>Sample Size for Estimating Proportion</h3>
+
+        <p>
+            When estimating a population proportion, the sample size formula is:
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            n = ( z<sub>α/2</sub> )² · p · q / E²
+        </p>
+
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>p = estimated proportion</li>
+            <li>q = 1 − p</li>
+            <li>E = margin of error</li>
+        </ul>
+
+        <p>
+            If no prior estimate of p is available, take p = 0.5 (worst case).
+        </p>
+    </div>
+
+    <!-- ================= EXAMPLE 2 ================= -->
+    <div class="content-box">
+        <h3>Example 2: Sample Size for Proportion</h3>
+
+        <p><strong>Given:</strong></p>
+        <ul>
+            <li>Estimated proportion (p) = 0.4</li>
+            <li>Margin of error (E) = 0.05</li>
+            <li>Confidence level = 95%</li>
+        </ul>
+
+        <p><strong>Solution:</strong></p>
+
+        <p>
+            q = 1 − 0.4 = 0.6
+        </p>
+
+        <p>
+            z<sub>α/2</sub> = 1.96
+        </p>
+
+        <p>
+            n = (1.96)² × 0.4 × 0.6 / (0.05)²
+        </p>
+
+        <p>
+            n = 3.8416 × 0.24 / 0.0025
+        </p>
+
+        <p>
+            n = 368.79
+        </p>
+
+        <p><strong>Required Sample Size:</strong></p>
+        <p>
+            n ≈ <strong>369</strong>
+        </p>
+    </div>
+
+    <!-- ================= FINITE POPULATION CORRECTION ================= -->
+    <div class="content-box">
+        <h3>Sample Size for Finite Population</h3>
+
+        <p>
+            When the population size (N) is small, the sample size is adjusted
+            using the finite population correction formula:
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            n<sub>adj</sub> = n / [ 1 + (n − 1) / N ]
+        </p>
+
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>n = initial sample size</li>
+            <li>N = population size</li>
+        </ul>
+    </div>
+
+    <!-- ================= APPLICATIONS ================= -->
+    <div class="content-box">
+        <h3>Applications of Sample Size Determination</h3>
+
+        <ul>
+            <li>Market research surveys</li>
+            <li>Quality control and manufacturing</li>
+            <li>Medical and clinical trials</li>
+            <li>Machine learning data collection</li>
+            <li>Social science research</li>
+        </ul>
+    </div>
+
+    <!-- ================= CONCLUSION ================= -->
+    <div class="content-box">
+        <h3>Conclusion</h3>
+
+        <p>
+            Sample size determination ensures accurate, cost-effective,
+            and statistically valid conclusions. Proper calculation helps
+            reduce error and improve confidence in results.
+        </p>
+    </div>
+
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
