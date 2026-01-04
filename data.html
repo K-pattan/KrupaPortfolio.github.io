@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Cleaning and Visualization using Python</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span></div>
+
+<div class="container">
+
+<!-- ====================== INTRO ====================== -->
+<div class="content-box">
+    <h3>Data Cleaning and Visualization in Probability & Statistics</h3>
+
+    <p>
+        In Probability and Statistics, raw data collected from real-world sources
+        is often <strong>incomplete, inconsistent, or noisy</strong>.
+        <strong>Data Cleaning</strong> ensures data quality, while
+        <strong>Data Visualization</strong> helps in understanding distributions,
+        trends, and patterns.
+    </p>
+
+    <p>
+        Python provides powerful libraries such as
+        <strong>Pandas</strong>, <strong>NumPy</strong>, and
+        <strong>Matplotlib</strong> to perform efficient data cleaning and
+        visualization.
+    </p>
+</div>
+
+<!-- ====================== DATA CLEANING ====================== -->
+<div class="content-box">
+    <h3>1. Data Cleaning</h3>
+
+    <p>
+        <strong>Data cleaning</strong> is the process of identifying and correcting
+        errors, missing values, and inconsistencies in data before analysis.
+        Clean data leads to accurate probability calculations and reliable
+        statistical conclusions.
+    </p>
+
+    <h4>Common Data Problems</h4>
+    <ul>
+        <li>Missing values</li>
+        <li>Duplicate records</li>
+        <li>Outliers</li>
+        <li>Incorrect data types</li>
+        <li>Inconsistent formatting</li>
+    </ul>
+</div>
+
+<!-- ====================== HANDLING MISSING DATA ====================== -->
+<div class="content-box">
+    <h3>Handling Missing Data</h3>
+
+    <p>
+        Missing data can distort mean, variance, and probability estimates.
+        Python allows us to detect and handle missing values efficiently.
+    </p>
+
+    <h4>Example (Using Pandas)</h4>
+
+    <pre>
+import pandas as pd
+
+data = pd.DataFrame({
+    "Marks": [45, 50, None, 60, 55]
+})
+
+data.isnull()
+    </pre>
+
+    <p><strong>Removing missing values:</strong></p>
+
+    <pre>
+data.dropna()
+    </pre>
+
+    <p><strong>Filling missing values using mean:</strong></p>
+
+    <pre>
+data["Marks"].fillna(data["Marks"].mean(), inplace=True)
+    </pre>
+</div>
+
+<!-- ====================== OUTLIERS ====================== -->
+<div class="content-box">
+    <h3>Outlier Detection</h3>
+
+    <p>
+        Outliers are extreme values that significantly differ from other observations.
+        They can affect mean and standard deviation.
+    </p>
+
+    <h4>Example</h4>
+
+    <pre>
+import numpy as np
+
+data = np.array([10, 12, 15, 18, 100])
+np.mean(data)
+    </pre>
+
+    <p>
+        The value <strong>100</strong> is an outlier that increases the mean.
+        Such values must be analyzed before removal.
+    </p>
+</div>
+
+<!-- ====================== DATA TRANSFORMATION ====================== -->
+<div class="content-box">
+    <h3>Data Transformation</h3>
+
+    <p>
+        Data transformation converts data into a suitable format for analysis.
+        This includes type conversion, normalization, and scaling.
+    </p>
+
+    <h4>Example</h4>
+
+    <pre>
+data = data.astype(float)
+    </pre>
+</div>
+
+<!-- ====================== DATA VISUALIZATION ====================== -->
+<div class="content-box">
+    <h3>2. Data Visualization</h3>
+
+    <p>
+        <strong>Data visualization</strong> is the graphical representation of data.
+        It helps in understanding frequency distributions, dispersion, skewness,
+        and trends.
+    </p>
+</div>
+
+<!-- ====================== HISTOGRAM ====================== -->
+<div class="content-box">
+    <h3>Histogram</h3>
+
+    <p>
+        A <strong>histogram</strong> represents the frequency distribution of
+        continuous data. It is widely used to visualize probability distributions.
+    </p>
+
+    <h4>Python Example</h4>
+
+    <pre>
+import matplotlib.pyplot as plt
+
+data = [45, 50, 55, 60, 65, 70, 75]
+
+plt.hist(data, bins=5)
+plt.xlabel("Marks")
+plt.ylabel("Frequency")
+plt.title("Histogram of Marks")
+plt.show()
+    </pre>
+
+    <p>
+        Histograms help identify symmetry, skewness, and spread of data.
+    </p>
+</div>
+
+<!-- ====================== BOX PLOT ====================== -->
+<div class="content-box">
+    <h3>Box Plot</h3>
+
+    <p>
+        A <strong>box plot</strong> summarizes data using
+        quartiles and highlights outliers.
+    </p>
+
+    <h4>Python Example</h4>
+
+    <pre>
+plt.boxplot(data)
+plt.title("Box Plot of Marks")
+plt.show()
+    </pre>
+
+    <p>
+        Box plots are useful for detecting skewness and comparing datasets.
+    </p>
+</div>
+
+<!-- ====================== APPLICATIONS ====================== -->
+<div class="content-box">
+    <h3>Applications in Probability & Statistics</h3>
+
+    <ul>
+        <li>Accurate calculation of mean, variance, and standard deviation</li>
+        <li>Understanding probability distributions</li>
+        <li>Detection of skewness and outliers</li>
+        <li>Hypothesis testing and inference</li>
+        <li>Data-driven decision making</li>
+    </ul>
+</div>
+
+<!-- ====================== CONCLUSION ====================== -->
+<div class="content-box">
+    <h3>Conclusion</h3>
+
+    <p>
+        Data cleaning ensures reliability, while visualization provides insight.
+        Python bridges theory and practice by allowing students to implement
+        probability and statistical concepts on real-world datasets efficiently.
+    </p>
+</div>
+
+<a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
