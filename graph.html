@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Histogram and Box Plot using Python</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span></div>
+
+<div class="container">
+
+<!-- ================= INTRO ================= -->
+<div class="content-box">
+    <h3>Histogram and Box Plot using Python</h3>
+
+    <p>
+        Graphical representation of data is essential in
+        <strong>Probability and Statistics</strong> to understand
+        distribution, spread, and variability of data.
+        Two important graphical tools are the
+        <strong>Histogram</strong> and the <strong>Box Plot</strong>.
+    </p>
+</div>
+
+<!-- ================= HISTOGRAM ================= -->
+<div class="content-box">
+    <h3>1. Histogram</h3>
+
+    <p>
+        A <strong>Histogram</strong> is a graphical representation of the
+        frequency distribution of continuous data.
+        It divides data into class intervals (bins) and
+        shows how many observations fall into each interval.
+    </p>
+
+    <h4>Example Dataset</h4>
+    <p style="text-align:center;">
+        45, 50, 52, 55, 58, 60, 62, 65, 68, 70
+    </p>
+
+    <h4>Python Code</h4>
+    <pre>
+import matplotlib.pyplot as plt
+
+
+marks = [45, 50, 52, 55, 58, 60, 62, 65, 68, 70]
+
+
+plt.hist(marks, bins=5, edgecolor='black')
+plt.xlabel("Marks")
+plt.ylabel("Frequency")
+plt.title("Histogram of Student Marks")
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.show()
+    </pre>
+
+    <h4>Histogram Graph</h4>
+    <img src="https://uploads.onecompiler.io/445vtyxqe/449h2gmfe/hist.png" alt="Histogram of Marks" class="center-img" width=400>
+
+    <p>
+        <strong>Interpretation:</strong><br>
+        The histogram shows the distribution of marks across intervals.
+        It helps identify the shape of the data (symmetry or skewness)
+        and concentration of values.
+    </p>
+</div>
+
+<!-- ================= BOX PLOT ================= -->
+<div class="content-box">
+    <h3>2. Box Plot</h3>
+
+    <p>
+        A <strong>Box Plot</strong> (Box-and-Whisker plot) represents data
+        using five-number summary:
+        minimum, first quartile (Q1), median, third quartile (Q3), and maximum.
+    </p>
+
+    <h4>Python Code</h4>
+    <pre>
+import matplotlib.pyplot as plt
+marks = [45, 50, 52, 55, 58, 60, 62, 65, 68, 70]
+
+plt.boxplot(
+    marks,
+    vert=True,
+    patch_artist=True
+)
+
+plt.ylabel("Marks")
+plt.title("Box Plot of Student Marks")
+plt.grid(axis='y', linestyle='--', alpha=0.6)
+plt.show()
+
+    </pre>
+
+    <h4>Box Plot Graph</h4>
+    <img src="https://uploads.onecompiler.io/445vtyxqe/449h2gmfe/box.png" alt="Box Plot of Marks" class="center-img" width=400>
+
+    <p>
+        <strong>Interpretation:</strong><br>
+        The line inside the box represents the median.
+        The box shows the interquartile range (IQR),
+        and whiskers indicate the spread of data.
+        Any points outside whiskers represent outliers.
+    </p>
+</div>
+
+<!-- ================= COMPARISON ================= -->
+<div class="content-box">
+    <h3>Histogram vs Box Plot</h3>
+
+    <table border="1" cellpadding="10" cellspacing="0" style="width:100%; text-align:center;">
+        <tr>
+            <th>Histogram</th>
+            <th>Box Plot</th>
+        </tr>
+        <tr>
+            <td>Shows frequency distribution</td>
+            <td>Shows quartile summary</td>
+        </tr>
+        <tr>
+            <td>Useful for shape analysis</td>
+            <td>Useful for detecting outliers</td>
+        </tr>
+        <tr>
+            <td>Best for large datasets</td>
+            <td>Best for comparison</td>
+        </tr>
+    </table>
+</div>
+
+<a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
