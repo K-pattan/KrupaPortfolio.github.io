@@ -177,6 +177,138 @@
             σ = √2.4 ≈ 1.55
         </p>
     </div>
+    
+    <!-- ====================== BINOMIAL FITTING EXAMPLE ====================== -->
+<div class="content-box">
+    <h3>Binomial Distribution – Example</h3>
+
+    <p>
+        A set of <strong>8 symmetrical coins</strong> was tossed <strong>256 times</strong>.
+        The observed frequencies of number of heads are given below.
+        We fit a <strong>Binomial Distribution</strong> to the data.
+    </p>
+
+    <h4>Observed Data</h4>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>No. of Heads (x)</th>
+            <th>Observed Frequency (f)</th>
+        </tr>
+        <tr><td>0</td><td>2</td></tr>
+        <tr><td>1</td><td>6</td></tr>
+        <tr><td>2</td><td>24</td></tr>
+        <tr><td>3</td><td>63</td></tr>
+        <tr><td>4</td><td>64</td></tr>
+        <tr><td>5</td><td>50</td></tr>
+        <tr><td>6</td><td>36</td></tr>
+        <tr><td>7</td><td>10</td></tr>
+        <tr><td>8</td><td>1</td></tr>
+        <tr>
+            <th>Total</th>
+            <th>256</th>
+        </tr>
+    </table>
+
+    <h4>Step 1: Identify Parameters</h4>
+
+    <p>
+        Number of trials: <strong>n = 8</strong><br>
+        Total observations: <strong>N = 256</strong>
+    </p>
+
+    <h4>Step 2: Estimation of p</h4>
+
+    <p>
+        For a binomial distribution,
+    </p>
+
+    <p style="text-align:center; font-size:18px;">
+        Mean = np
+    </p>
+
+    <p>
+        Also,
+    </p>
+
+    <p style="text-align:center; font-size:18px;">
+        Mean = Σfx / N
+    </p>
+
+    <p>
+        Σfx = (0×2) + (1×6) + (2×24) + (3×63) + (4×64) + (5×50) + (6×36) + (7×10) + (8×1)
+    </p>
+
+    <p>
+        Σfx = 1043
+    </p>
+
+    <p>
+        Mean = 1043 / 256 = 4.074
+    </p>
+
+    <p>
+        np = 4.074
+    </p>
+
+    <p>
+        p = 4.074 / 8 = <strong>0.509</strong>
+    </p>
+
+    <h4>Step 3: Find q</h4>
+
+    <p>
+        q = 1 − p = 1 − 0.509 = <strong>0.491</strong>
+    </p>
+
+    <h4>Step 4: Binomial Probability Formula</h4>
+
+    <p style="text-align:center; font-size:18px;">
+        P(X = x) = <sup>8</sup>C<sub>x</sub> (0.509)<sup>x</sup> (0.491)<sup>8−x</sup>
+    </p>
+
+    <h4>Step 5: Theoretical Frequencies</h4>
+
+    <p>
+        Theoretical frequency for x heads:
+    </p>
+
+    <p style="text-align:center; font-size:18px;">
+        T<sub>x</sub> = N × P(X = x)
+    </p>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>x</th>
+            <th>Theoretical Frequency (T<sub>x</sub>)</th>
+            <th>Rounded Value</th>
+        </tr>
+        <tr><td>0</td><td>0.865</td><td>1</td></tr>
+        <tr><td>1</td><td>7.172</td><td>7</td></tr>
+        <tr><td>2</td><td>26.021</td><td>26</td></tr>
+        <tr><td>3</td><td>53.950</td><td>54</td></tr>
+        <tr><td>4</td><td>69.909</td><td>70</td></tr>
+        <tr><td>5</td><td>57.978</td><td>58</td></tr>
+        <tr><td>6</td><td>30.052</td><td>30</td></tr>
+        <tr><td>7</td><td>8.901</td><td>9</td></tr>
+        <tr><td>8</td><td>1.153</td><td>1</td></tr>
+        <tr>
+            <th>Total</th>
+            <th>256.001</th>
+            <th>256</th>
+        </tr>
+    </table>
+
+    <h4>Conclusion</h4>
+
+    <p>
+        The fitted binomial distribution with parameters
+        <strong>n = 8</strong>, <strong>p = 0.509</strong> and <strong>q = 0.491</strong>
+        closely matches the observed data.
+        Hence, the given data follows a <strong>Binomial Distribution</strong>.
+    </p>
+</div>
+
 
     <!-- ====================== POISSON ====================== -->
     <div class="content-box">
@@ -209,6 +341,160 @@
             μ = 3 , σ² = 3 , σ = √3 ≈ 1.73
         </p>
     </div>
+    
+    
+
+    <div class="content-box">
+        <h3>Poisson Distribution - Example</h3>
+
+        <p>
+            A random sample of <strong>60 printed circuit boards</strong> was collected.
+            The number of defects observed per circuit board is given below.
+        </p>
+
+        <h4>Observed Data</h4>
+
+        <table class="data-table">
+            <tr>
+                <th>Number of Defects (x)</th>
+                <th>Observed Frequency (f)</th>
+            </tr>
+            <tr><td>0</td><td>32</td></tr>
+            <tr><td>1</td><td>15</td></tr>
+            <tr><td>2</td><td>9</td></tr>
+            <tr><td>3</td><td>4</td></tr>
+            <tr>
+                <th>Total</th>
+                <th>60</th>
+            </tr>
+        </table>
+    <br>
+
+    <!-- ====================== STEP 1 ====================== -->
+    
+        <h4>Step 1: Estimate the Poisson Parameter (λ)</h4>
+
+        <p>
+            For a Poisson distribution, the mean is given by:
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            λ = Σfx / N
+        </p>
+
+        <p>
+            Compute Σfx:
+        </p>
+
+        <p>
+            Σfx = (0×32) + (1×15) + (2×9) + (3×4)
+        </p>
+
+        <p>
+            Σfx = 0 + 15 + 18 + 12 = <strong>45</strong>
+        </p>
+
+        <p>
+            Total observations, N = 60
+        </p>
+
+        <p>
+            <strong>λ = 45 / 60 = 0.75</strong>
+        </p>
+    
+<br>
+    <!-- ====================== STEP 2 ====================== -->
+    
+        <h4>Step 2: Poisson Probability Formula</h4>
+
+        <p>
+            The probability mass function of Poisson distribution is:
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            P(X = x) = (e<sup>−λ</sup> λ<sup>x</sup>) / x!
+        </p>
+
+        <p>
+            Substituting λ = 0.75:
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            P(X = x) = (e<sup>−0.75</sup> (0.75)<sup>x</sup>) / x!
+        </p>
+    <br>
+
+    <!-- ====================== STEP 3 ====================== -->
+    
+        <h4>Step 3: Theoretical Frequencies</h4>
+
+        <p>
+            Theoretical frequency is calculated using:
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            T<sub>x</sub> = N × P(X = x)
+        </p>
+
+        <p>
+            where N = 60.
+        </p>
+
+        <table class="data-table">
+            <tr>
+                <th>x</th>
+                <th>T<sub>x</sub> (Calculated)</th>
+                <th>T<sub>x</sub> (Rounded)</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>60 × e<sup>−0.75</sup> = 28.341</td>
+                <td>29</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>60 × e<sup>−0.75</sup> × 0.75 = 21.256</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>60 × e<sup>−0.75</sup> × (0.75)<sup>2</sup> / 2! = 7.971</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>60 × e<sup>−0.75</sup> × (0.75)<sup>3</sup> / 3! = 1.992</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <th>Total</th>
+                <th>59.561</th>
+                <th>60</th>
+            </tr>
+        </table>
+    <br>
+
+    <!-- ====================== CONCLUSION ====================== -->
+    
+        <h4>Conclusion</h4>
+
+        <p>
+            The theoretical frequencies obtained using the Poisson distribution
+            closely match the observed frequencies.
+        </p>
+
+        <p>
+            Hence, a <strong>Poisson distribution with parameter λ = 0.75</strong>
+            provides a good fit for the given data.
+        </p>
+    
+
+   
+
+</div>
+
+
+
 
     <!-- ====================== NORMAL ====================== -->
     <div class="content-box">
@@ -249,6 +535,164 @@
             σ = √9 = 3
         </p>
     </div>
+    
+    <div class="content-box">
+
+    <h3>Solved Example: Normal Distribution</h3>
+
+    <p>
+        In a normal distribution, <strong>31% of the items are under 45</strong>
+        and <strong>10% of the items are over 64</strong>.
+        Find the <strong>mean (μ)</strong> and <strong>standard deviation (σ)</strong>.
+    </p>
+
+    <hr>
+
+    <h4>Step 1: Given Data</h4>
+    <ul>
+        <li>P(X &lt; 45) = 0.31</li>
+        <li>P(X &gt; 64) = 0.10</li>
+        <li>X ~ N(μ, σ²)</li>
+    </ul>
+
+    <hr>
+
+    <h4>Step 2: Convert to Standard Normal Variable</h4>
+
+    <p>
+        Standard normal variable:
+    </p>
+    <p style="text-align:center; font-size:18px;">
+        Z = (X − μ) / σ
+    </p>
+
+    <hr>
+
+    <h4>Step 3: First Condition</h4>
+
+    <p>
+        P(X &lt; 45) = 0.31
+    </p>
+
+    <p>
+        ⇒ P( (X − μ) / σ &lt; (45 − μ) / σ ) = 0.31
+    </p>
+
+    <p>
+        From standard normal table:
+    </p>
+
+    <p style="text-align:center; font-size:18px;">
+        Φ(z) = 0.31 ⇒ z = −0.50
+    </p>
+
+    <p>
+        Therefore,
+    </p>
+
+    <p style="text-align:center; font-size:18px;">
+        (45 − μ) / σ = −0.50 &nbsp;&nbsp; (1)
+    </p>
+
+    <hr>
+
+    <h4>Step 4: Second Condition</h4>
+
+    <p>
+        P(X &gt; 64) = 0.10
+    </p>
+
+    <p>
+        ⇒ P(X &lt; 64) = 1 − 0.10 = 0.90
+    </p>
+
+    <p>
+        ⇒ P( (X − μ) / σ &lt; (64 − μ) / σ ) = 0.90
+    </p>
+
+    <p>
+        From standard normal table:
+    </p>
+
+    <p style="text-align:center; font-size:18px;">
+        Φ(z) = 0.90 ⇒ z = 1.28
+    </p>
+
+    <p>
+        Therefore,
+    </p>
+
+    <p style="text-align:center; font-size:18px;">
+        (64 − μ) / σ = 1.28 &nbsp;&nbsp; (2)
+    </p>
+
+    <hr>
+
+    <h4>Step 5: Solve the Equations</h4>
+
+    <p><strong>From equation (1):</strong></p>
+
+    <p style="text-align:center; font-size:18px;">
+        45 − μ = −0.50σ
+    </p>
+
+    <p style="text-align:center; font-size:18px;">
+        μ − 0.50σ = 45 &nbsp;&nbsp; (3)
+    </p>
+
+    <p><strong>From equation (2):</strong></p>
+
+    <p style="text-align:center; font-size:18px;">
+        64 − μ = 1.28σ
+    </p>
+
+    <p style="text-align:center; font-size:18px;">
+        μ + 1.28σ = 64 &nbsp;&nbsp; (4)
+    </p>
+
+    <hr>
+
+    <h4>Step 6: Final Calculation</h4>
+
+    <p>
+        Subtract equation (3) from equation (4):
+    </p>
+
+    <p style="text-align:center; font-size:18px;">
+        (μ + 1.28σ) − (μ − 0.50σ) = 64 − 45
+    </p>
+
+    <p style="text-align:center; font-size:18px;">
+        1.78σ = 19
+    </p>
+
+    <p style="text-align:center; font-size:18px;">
+        σ = 10.67
+    </p>
+
+    <p>
+        Substitute σ into equation (3):
+    </p>
+
+    <p style="text-align:center; font-size:18px;">
+        μ = 45 + 0.50(10.67)
+    </p>
+
+    <p style="text-align:center; font-size:18px;">
+        μ = 50.34
+    </p>
+
+    <hr>
+
+    <h4>Final Answer</h4>
+
+    <ul>
+        <li><strong>Mean (μ) = 50.34</strong></li>
+        <li><strong>Standard Deviation (σ) = 10.67</strong></li>
+    </ul>
+
+</div>
+
 
     <a href="index.html" class="back-button">← Back to Course Overview</a>
 
