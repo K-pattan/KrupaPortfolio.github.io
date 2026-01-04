@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Based Data Analysis – Probability & Statistics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span></div>
+
+<div class="container">
+
+<!-- ====================== INTRO ====================== -->
+<div class="content-box">
+    <h3>Python Based Data Analysis in Probability and Statistics</h3>
+
+    <p>
+        Python is one of the most widely used programming languages for
+        <strong>data analysis</strong>, <strong>probability</strong>, and
+        <strong>statistical computing</strong>. Its simplicity, readability,
+        and powerful libraries make it ideal for analyzing data, visualizing
+        results, and performing statistical computations.
+    </p>
+
+    <p>
+        In Probability and Statistics, Python helps automate calculations,
+        analyze large datasets, and visualize distributions such as
+        binomial, Poisson, and normal distributions.
+    </p>
+</div>
+
+<!-- ====================== WHY PYTHON ====================== -->
+<div class="content-box">
+    <h3>Why Python for Probability and Statistics?</h3>
+
+    <ul>
+        <li>Easy to learn and write</li>
+        <li>Supports large datasets efficiently</li>
+        <li>Provides powerful mathematical and statistical libraries</li>
+        <li>Excellent visualization support</li>
+        <li>Widely used in Data Science, AI, and Machine Learning</li>
+    </ul>
+</div>
+
+<!-- ====================== PYTHON BASICS ====================== -->
+<div class="content-box">
+    <h3>Basics of Python Programming</h3>
+
+    <h4>1. Variables and Data Types</h4>
+    <p>
+        Variables store data values. Python automatically determines the data type.
+    </p>
+
+    <pre>
+x = 10          # Integer
+y = 3.14        # Float
+name = "Data"   # String
+    </pre>
+
+    <h4>2. Lists and Tuples</h4>
+    <p>
+        Lists are used to store multiple values such as observations or samples.
+    </p>
+
+    <pre>
+data = [12, 15, 18, 20, 22]
+    </pre>
+
+    <h4>3. Loops</h4>
+    <p>
+        Loops help perform repetitive operations like calculating frequencies.
+    </p>
+
+    <pre>
+for value in data:
+    print(value)
+    </pre>
+
+    <h4>4. Functions</h4>
+    <p>
+        Functions help organize reusable code.
+    </p>
+
+    <pre>
+def mean(data):
+    return sum(data)/len(data)
+    </pre>
+</div>
+
+<!-- ====================== PYTHON LIBRARIES ====================== -->
+<div class="content-box">
+    <h3>Important Python Libraries for Statistics</h3>
+
+    <h4>1. NumPy</h4>
+    <p>
+        NumPy is used for numerical computations and array operations.
+    </p>
+
+    <pre>
+import numpy as np
+data = np.array([10, 20, 30, 40])
+np.mean(data)
+    </pre>
+
+    <h4>2. Pandas</h4>
+    <p>
+        Pandas is used for data manipulation and analysis using tables.
+    </p>
+
+    <pre>
+import pandas as pd
+df = pd.DataFrame({"Marks": [45, 50, 55, 60]})
+df.mean()
+    </pre>
+
+    <h4>3. Matplotlib</h4>
+    <p>
+        Matplotlib is used for plotting graphs and statistical diagrams.
+    </p>
+
+    <pre>
+import matplotlib.pyplot as plt
+plt.hist(data)
+plt.show()
+    </pre>
+</div>
+
+<!-- ====================== PROBABILITY ====================== -->
+<div class="content-box">
+    <h3>Python in Probability Analysis</h3>
+
+    <p>
+        Python can be used to simulate probability experiments such as coin tosses,
+        dice rolls, and random sampling.
+    </p>
+
+    <h4>Example: Coin Toss Simulation</h4>
+
+    <pre>
+import random
+
+heads = 0
+for i in range(100):
+    if random.choice(["H","T"]) == "H":
+        heads += 1
+
+print("Probability of Heads:", heads/100)
+    </pre>
+</div>
+
+<!-- ====================== STATISTICS ====================== -->
+<div class="content-box">
+    <h3>Python in Statistical Analysis</h3>
+
+    <h4>1. Mean, Median, Mode</h4>
+
+    <pre>
+import statistics as stats
+
+data = [10, 12, 15, 18, 20]
+stats.mean(data)
+stats.median(data)
+stats.mode(data)
+    </pre>
+
+    <h4>2. Variance and Standard Deviation</h4>
+
+    <pre>
+stats.variance(data)
+stats.stdev(data)
+    </pre>
+</div>
+
+<!-- ====================== DATA VISUALIZATION ====================== -->
+<div class="content-box">
+    <h3>Data Visualization using Python</h3>
+
+    <p>
+        Visualization helps understand data patterns, spread, and skewness.
+    </p>
+
+    <h4>Histogram Example</h4>
+
+    <pre>
+plt.hist(data, bins=5)
+plt.xlabel("Values")
+plt.ylabel("Frequency")
+plt.title("Histogram")
+plt.show()
+    </pre>
+
+    <h4>Box Plot Example</h4>
+
+    <pre>
+plt.boxplot(data)
+plt.title("Box Plot")
+plt.show()
+    </pre>
+</div>
+
+<!-- ====================== APPLICATIONS ====================== -->
+<div class="content-box">
+    <h3>Applications of Python in Probability & Statistics</h3>
+
+    <ul>
+        <li>Statistical data analysis</li>
+        <li>Hypothesis testing</li>
+        <li>Probability simulations</li>
+        <li>Data visualization</li>
+        <li>Machine Learning preprocessing</li>
+        <li>Quality control and reliability analysis</li>
+    </ul>
+</div>
+
+<!-- ====================== CONCLUSION ====================== -->
+<div class="content-box">
+    <h3>Conclusion</h3>
+
+    <p>
+        Python serves as a powerful tool for implementing probability and
+        statistical concepts practically. By combining theory with Python-based
+        analysis, students gain deeper understanding and real-world problem
+        solving skills essential for modern computing fields.
+    </p>
+</div>
+
+<a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
