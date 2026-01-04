@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hypothesis Testing – t-Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+   <div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span></div>
+
+<div class="container">
+
+    <!-- ====================== INTRO ====================== -->
+    <div class="content-box">
+        <h3>Hypothesis Testing using t-Test</h3>
+
+        <p>
+            The <strong>t-test</strong> is a statistical hypothesis test used to determine
+            whether there is a significant difference between a sample mean and a
+            population mean when the population standard deviation is <strong>unknown</strong>
+            and the sample size is <strong>small (n < 30)</strong>.
+        </p>
+
+        <p>
+            It is based on the <strong>Student’s t-distribution</strong>, which is wider
+            and flatter than the normal distribution, especially for small samples.
+        </p>
+    </div>
+
+    <!-- ====================== CONDITIONS ====================== -->
+    <div class="content-box">
+        <h3>Conditions for Applying t-Test</h3>
+
+        <ul>
+            <li>Sample size is small (n < 30)</li>
+            <li>Population standard deviation (σ) is unknown</li>
+            <li>Sample is randomly selected</li>
+            <li>Population is approximately normally distributed</li>
+        </ul>
+    </div>
+
+    <!-- ====================== HYPOTHESES ====================== -->
+    <div class="content-box">
+        <h3>Statistical Hypotheses</h3>
+
+        <p><strong>Null Hypothesis (H₀):</strong></p>
+        <p>
+            The sample mean is equal to the population mean.
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            H₀ : μ = μ₀
+        </p>
+
+        <p><strong>Alternative Hypothesis (H₁):</strong></p>
+        <p>
+            The sample mean is not equal to the population mean.
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            H₁ : μ ≠ μ₀  (Two-tailed test)
+        </p>
+    </div>
+
+    <!-- ====================== FORMULA ====================== -->
+    <div class="content-box">
+        <h3>Test Statistic Formula</h3>
+
+        <p>
+            The t-test statistic is calculated using:
+        </p>
+
+        <p style="text-align:center; font-size:20px;">
+            t = (x̄ − μ₀) / (s / √n)
+        </p>
+
+        <ul>
+            <li><strong>x̄</strong> = Sample mean</li>
+            <li><strong>μ₀</strong> = Population mean (hypothesized)</li>
+            <li><strong>s</strong> = Sample standard deviation</li>
+            <li><strong>n</strong> = Sample size</li>
+        </ul>
+
+        <p>
+            Degrees of freedom:
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            df = n − 1
+        </p>
+    </div>
+
+    <!-- ====================== DECISION RULE ====================== -->
+    <div class="content-box">
+        <h3>Decision Rule</h3>
+
+        <p>
+            1. Choose level of significance (α), usually 0.05.
+        </p>
+        <p>
+            2. Find critical value t<sub>α/2</sub> from t-table using df.
+        </p>
+        <p>
+            3. Compute calculated t-value.
+        </p>
+
+        <p><strong>Decision:</strong></p>
+        <ul>
+            <li>If |t<sub>cal</sub>| > t<sub>table</sub> → Reject H₀</li>
+            <li>If |t<sub>cal</sub>| ≤ t<sub>table</sub> → Accept H₀</li>
+        </ul>
+    </div>
+
+    <!-- ====================== SOLVED EXAMPLE ====================== -->
+    <div class="content-box">
+        <h3>Solved Example</h3>
+
+        <p>
+            A sample of <strong>10 observations</strong> has a mean of <strong>52</strong>
+            and a standard deviation of <strong>4</strong>.
+            Test whether the population mean is <strong>50</strong> at 5% level of significance.
+        </p>
+
+        <p><strong>Step 1: Given</strong></p>
+        <ul>
+            <li>x̄ = 52</li>
+            <li>μ₀ = 50</li>
+            <li>s = 4</li>
+            <li>n = 10</li>
+            <li>α = 0.05</li>
+        </ul>
+
+        <p><strong>Step 2: Hypotheses</strong></p>
+        <p>
+            H₀ : μ = 50<br>
+            H₁ : μ ≠ 50
+        </p>
+
+        <p><strong>Step 3: Test Statistic</strong></p>
+        <p style="text-align:center;">
+            t = (52 − 50) / (4 / √10)
+        </p>
+
+        <p style="text-align:center;">
+            t = 2 / 1.264 = <strong>1.58</strong>
+        </p>
+
+        <p><strong>Step 4: Critical Value</strong></p>
+        <p>
+            Degrees of freedom: df = 10 − 1 = 9<br>
+            From t-table at α = 0.05 (two-tailed): t<sub>0.025,9</sub> = <strong>2.262</strong>
+        </p>
+
+        <p><strong>Step 5: Decision</strong></p>
+        <p>
+            |1.58| < 2.262 → Accept H₀
+        </p>
+
+        <p><strong>Conclusion:</strong></p>
+        <p>
+            There is no significant difference between the sample mean and the population mean.
+        </p>
+    </div>
+
+    <!-- ====================== DIAGRAM ====================== -->
+    <div class="content-box">
+        <h3>t-Test Distribution Diagram</h3>
+
+        <p>
+            The shaded regions on both ends represent the rejection regions
+            for a two-tailed t-test.
+        </p>
+
+        <img src="https://uploads.onecompiler.io/445vtyxqe/449h2gmfe/t-test.png" alt="t-test distribution" class="center-img">
+
+        <p style="text-align:center; font-size:14px;">
+            Figure: t-distribution with rejection regions
+        </p>
+    </div>
+
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
