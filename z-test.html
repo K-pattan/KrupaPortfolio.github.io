@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hypothesis Testing – Z-Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  
+   <div class="theme-toggle" onclick="toggleTheme()">
+    <span id="theme-icon">🌙</span></div>
+
+<div class="container">
+
+    <!-- ================= INTRO ================= -->
+    <div class="content-box">
+        <h3>Hypothesis Testing – Z-Test</h3>
+
+        <p>
+            <strong>Hypothesis testing</strong> is a statistical procedure used to
+            make decisions about population parameters based on sample data.
+        </p>
+
+        <p>
+            A <strong>Z-test</strong> is used to test hypotheses about a population
+            <strong>mean or proportion</strong> when the sample size is large
+            (n ≥ 30) or when the population standard deviation is known.
+        </p>
+    </div>
+
+    <!-- ================= WHEN TO USE ================= -->
+    <div class="content-box">
+        <h3>When to Use Z-Test</h3>
+
+        <ul>
+            <li>Sample size is large (n ≥ 30)</li>
+            <li>Population standard deviation (σ) is known</li>
+            <li>Data is approximately normally distributed</li>
+            <li>Observations are independent</li>
+        </ul>
+    </div>
+
+    <!-- ================= TYPES ================= -->
+    <div class="content-box">
+        <h3>Types of Z-Test</h3>
+
+        <ul>
+            <li>One-tailed Z-test (Left-tailed or Right-tailed)</li>
+            <li>Two-tailed Z-test</li>
+        </ul>
+        <br>
+        
+        <img src="https://uploads.onecompiler.io/445vtyxqe/449h2gmfe/z-test.png" alt="z-test" width="400">
+
+    </div>
+
+    <!-- ================= HYPOTHESES ================= -->
+    <div class="content-box">
+        <h3>Null and Alternative Hypotheses</h3>
+
+        <p>
+            <strong>Null Hypothesis (H₀):</strong>
+            Statement of no effect or no difference.
+        </p>
+
+        <p>
+            <strong>Alternative Hypothesis (H₁):</strong>
+            Statement that contradicts the null hypothesis.
+        </p>
+
+        <h4>Examples</h4>
+
+        <ul>
+            <li>H₀ : μ = μ₀</li>
+            <li>H₁ : μ ≠ μ₀ (Two-tailed)</li>
+            <li>H₁ : μ > μ₀ (Right-tailed)</li>
+            <li>H₁ : μ < μ₀ (Left-tailed)</li>
+        </ul>
+    </div>
+
+    <!-- ================= TEST STATISTIC ================= -->
+    <div class="content-box">
+        <h3>Z-Test Statistic</h3>
+
+        <p>
+            The Z-test statistic is calculated using the formula:
+        </p>
+
+        <p style="text-align:center; font-size:18px;">
+            Z = ( x̄ − μ₀ ) / ( σ / √n )
+        </p>
+
+        <p><strong>Where:</strong></p>
+        <ul>
+            <li>x̄ = sample mean</li>
+            <li>μ₀ = hypothesized population mean</li>
+            <li>σ = population standard deviation</li>
+            <li>n = sample size</li>
+        </ul>
+    </div>
+
+    <!-- ================= DECISION RULE ================= -->
+    <div class="content-box">
+        <h3>Decision Rule</h3>
+
+        <p>
+            The decision is based on the comparison of the
+            <strong>calculated Z-value</strong> with the
+            <strong>critical Z-value</strong>.
+        </p>
+
+        <h4>At 5% Level of Significance:</h4>
+
+        <ul>
+            <li>Two-tailed test: Reject H₀ if |Z| > 1.96</li>
+            <li>Right-tailed test: Reject H₀ if Z > 1.645</li>
+            <li>Left-tailed test: Reject H₀ if Z < −1.645</li>
+        </ul>
+    </div>
+
+    <!-- ================= SOLVED EXAMPLE ================= -->
+    <div class="content-box">
+        <h3>Solved Example (Z-Test for Mean)</h3>
+
+        <p>
+            A manufacturer claims that the mean life of bulbs produced is
+            1200 hours. A random sample of 50 bulbs has a mean life of
+            1160 hours with a standard deviation of 100 hours.
+            Test the claim at 5% level of significance.
+        </p>
+
+        <h4>Step 1: State the Hypotheses</h4>
+
+        <p>
+            H₀ : μ = 1200 hours  
+            <br>
+            H₁ : μ ≠ 1200 hours (Two-tailed test)
+        </p>
+
+        <h4>Step 2: Level of Significance</h4>
+
+        <p>
+            α = 0.05
+        </p>
+
+        <h4>Step 3: Test Statistic</h4>
+
+        <p>
+            x̄ = 1160, μ₀ = 1200, σ = 100, n = 50
+        </p>
+
+        <p>
+            Z = (1160 − 1200) / (100 / √50)
+        </p>
+
+        <p>
+            Z = −40 / 14.14
+        </p>
+
+        <p>
+            Z ≈ −2.83
+        </p>
+
+        <h4>Step 4: Critical Value</h4>
+
+        <p>
+            For α = 0.05 (two-tailed), critical Z = ±1.96
+        </p>
+
+        <h4>Step 5: Decision</h4>
+
+        <p>
+            |Z| = 2.83 > 1.96  
+            <br>
+            Reject the null hypothesis.
+        </p>
+
+        <h4>Conclusion</h4>
+
+        <p>
+            There is sufficient evidence to conclude that the mean life
+            of the bulbs is significantly different from 1200 hours.
+        </p>
+    </div>
+
+    <!-- ================= APPLICATIONS ================= -->
+    <div class="content-box">
+        <h3>Applications of Z-Test</h3>
+
+        <ul>
+            <li>Quality control in manufacturing</li>
+            <li>Medical and pharmaceutical testing</li>
+            <li>Market research analysis</li>
+            <li>Machine learning model evaluation</li>
+            <li>Engineering reliability studies</li>
+        </ul>
+    </div>
+
+    <a href="index.html" class="back-button">← Back to Course Overview</a>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
